@@ -1793,87 +1793,102 @@ input, textarea, select { font-family: inherit; }
 }
 
 /* ==========================================================================
-   STATS / TRUST BAR
+   STATS — full-bleed photo, floating numbers, no boxes
    ========================================================================== */
-#stats {
-  background: var(--grad-hero);
-  padding: 80px 0;
-}
-
-.stats-photo-section {
+.stats-hero-section {
   position: relative;
-  background: #00081a;
+  padding: 120px 0;
   overflow: hidden;
 }
 
-/* Glowing orbs */
-.stats-photo-section::before {
-  content: '';
+.stats-hero-bg {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse 70% 120% at 50% 50%, rgba(0,190,220,0.13) 0%, transparent 65%),
-    radial-gradient(ellipse 40% 80% at 10% 50%, rgba(0,120,180,0.10) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 80% at 90% 50%, rgba(0,190,220,0.08) 0%, transparent 60%);
-  pointer-events: none;
+  background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&q=85&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center 40%;
+  background-attachment: fixed;
 }
 
-/* Subtle dot-grid texture */
-.stats-photo-section::after {
-  content: '';
+.stats-hero-overlay {
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(rgba(0,190,220,0.15) 1px, transparent 1px);
-  background-size: 28px 28px;
-  opacity: 0.4;
-  pointer-events: none;
+  background: linear-gradient(
+    105deg,
+    rgba(0,8,26,0.93) 0%,
+    rgba(0,17,43,0.82) 45%,
+    rgba(0,35,50,0.75) 100%
+  );
 }
 
-.stats-photo-section .container {
+.stats-hero-inner {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 32px;
+.stats-hero-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.stat-item {
+.stat-hero-item {
+  flex: 1;
   text-align: center;
-  padding: 32px 16px;
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: var(--radius-md);
-  background: rgba(255,255,255,0.04);
-  transition: all var(--dur-fast);
+  padding: 0 24px;
+  position: relative;
 }
 
-.stat-item:hover {
-  background: rgba(255,255,255,0.07);
-  transform: translateY(-3px);
+.stat-hero-item + .stat-hero-item::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 15%; bottom: 15%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(0,190,220,0.4), transparent);
 }
 
-.stat-number {
+.stat-hero-number {
   font-family: var(--font-display);
-  font-size: 52px;
+  font-size: 72px;
   font-weight: 900;
-  color: var(--white);
   line-height: 1;
-  letter-spacing: -2px;
-  margin-bottom: 8px;
+  letter-spacing: -3px;
+  margin-bottom: 16px;
 }
 
-.stat-number span {
-  color: var(--sky);
+.stat-hero-number .count { color: var(--sky); }
+
+.stat-hero-divider {
+  width: 28px;
+  height: 3px;
+  background: var(--sky);
+  border-radius: 2px;
+  margin: 0 auto 14px;
+  opacity: 0.75;
 }
 
-.stat-label {
-  font-size: 13px;
-  font-weight: 500;
+.stat-hero-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   color: rgba(255,255,255,0.55);
-  line-height: 1.4;
 }
+
+@media (max-width: 900px) {
+  .stats-hero-grid { flex-wrap: wrap; gap: 40px 0; }
+  .stat-hero-item { flex: 0 0 33.33%; }
+  .stat-hero-item + .stat-hero-item::before { display: none; }
+  .stat-hero-number { font-size: 52px; }
+}
+@media (max-width: 540px) {
+  .stat-hero-item { flex: 0 0 50%; }
+  .stat-hero-number { font-size: 44px; }
+}
+
+/* legacy selectors kept so old responsive rules don't break */
+.stats-grid { display: none; }
+.stat-item, .stat-number, .stat-label { display: none; }
 
 /* ==========================================================================
    ROADMAP
