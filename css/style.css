@@ -153,22 +153,15 @@ input, textarea, select { font-family: inherit; }
 }
 
 .nav-logo-img {
-  height: 36px;
+  height: 44px;
   width: auto;
-  background: rgba(255,255,255,0.95);
-  padding: 5px 12px;
-  border-radius: 8px;
   display: block;
 }
 
 .footer-logo-img {
-  height: 40px;
+  height: 52px;
   width: auto;
-  background: rgba(255,255,255,0.10);
-  padding: 6px 14px;
-  border-radius: 8px;
   display: block;
-  filter: brightness(0) invert(1);
 }
 
 .nav-links {
