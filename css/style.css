@@ -582,68 +582,136 @@ input, textarea, select { font-family: inherit; }
 /* ==========================================================================
    LOGOS / SOCIAL PROOF BAR
    ========================================================================== */
-#logos {
-  background: var(--white);
+/* --- Partners Showcase --- */
+.partners-showcase {
+  background: linear-gradient(180deg, #f4f8fb 0%, #ffffff 100%);
+  padding: var(--section-py) 0;
   border-bottom: 1px solid var(--border);
-  padding: 28px 0;
 }
 
-.logos-inner {
-  display: flex;
-  align-items: center;
-  gap: 48px;
-  overflow: hidden;
+.partners-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 64px;
 }
 
-.logos-label {
+.partners-eyebrow {
   font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 2px;
+  font-weight: 700;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--text-muted);
-  white-space: nowrap;
-  flex-shrink: 0;
+  color: var(--sky);
+  margin-bottom: 14px;
 }
 
-.logos-divider {
-  width: 1px;
-  height: 32px;
-  background: var(--border);
-  flex-shrink: 0;
-}
-
-.logos-track {
-  display: flex;
-  align-items: center;
-  gap: 56px;
-  flex: 1;
-}
-
-.partner-logo-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  opacity: 0.6;
-  transition: opacity var(--dur-fast);
-  filter: grayscale(1);
-  flex-shrink: 0;
-}
-.partner-logo-item:hover { opacity: 1; filter: none; }
-
-.partner-logo-name {
+.partners-title {
   font-family: var(--font-display);
-  font-size: 17px;
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.partners-sub {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.partner-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.partner-showcase-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px 28px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), border-color 0.25s;
+  cursor: default;
+}
+.partner-showcase-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--sky);
+}
+
+.partner-showcase-accent {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.partner-showcase-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+
+.partner-showcase-flag {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.partner-showcase-name {
+  font-family: var(--font-display);
+  font-size: 22px;
   font-weight: 800;
   color: var(--text-primary);
   letter-spacing: -0.3px;
+  margin-bottom: 3px;
 }
 
-.partner-logo-country {
-  font-size: 10px;
-  font-weight: 500;
-  color: var(--text-muted);
-  letter-spacing: 1px;
+.partner-showcase-country {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.partner-showcase-desc {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.partner-showcase-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.partner-showcase-tags span {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 99px;
+  background: var(--bg-page);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 768px) {
+  .partner-cards-grid { grid-template-columns: 1fr; }
+  .partners-title { font-size: 28px; }
 }
 
 /* ==========================================================================
