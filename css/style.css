@@ -2069,3 +2069,377 @@ footer {
 
   .about-pillars { grid-template-columns: 1fr; }
 }
+
+/* ==========================================================================
+   ECOSYSTEM DIAGRAM
+   ========================================================================== */
+.eco-flow {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin: 56px 0 40px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.eco-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 0;
+  width: 160px;
+}
+
+.eco-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+  position: relative;
+}
+.eco-icon::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 23px;
+  border: 1.5px solid rgba(0,190,220,0.2);
+}
+
+.eco-title {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+.eco-desc {
+  font-size: 11px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.5;
+  margin-bottom: 8px;
+  max-width: 140px;
+}
+
+.eco-brands {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--sky);
+  opacity: 0.8;
+}
+
+.eco-connector {
+  flex: 1;
+  min-width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.eco-line {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(0,190,220,0.3), rgba(0,153,153,0.6), rgba(0,190,220,0.3));
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.eco-pulse {
+  position: absolute;
+  top: -2px;
+  left: -60px;
+  width: 60px;
+  height: 6px;
+  background: linear-gradient(90deg, transparent, var(--sky), transparent);
+  animation: eco-flow 1.8s linear infinite;
+  border-radius: 3px;
+}
+
+@keyframes eco-flow {
+  from { left: -60px; }
+  to { left: 100%; }
+}
+
+.eco-proto {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: rgba(0,190,220,0.5);
+  white-space: nowrap;
+}
+
+.eco-outcomes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(0,190,220,0.1);
+  border: 1px solid rgba(0,190,220,0.15);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-top: 16px;
+}
+
+.eco-outcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 24px 20px;
+  background: rgba(0,11,26,0.6);
+  gap: 8px;
+}
+
+.eco-outcome-num {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--sky);
+  line-height: 1;
+}
+
+.eco-outcome-label {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .eco-flow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .eco-node { width: 100%; flex-direction: row; text-align: left; gap: 16px; padding: 16px 0; }
+  .eco-icon { flex-shrink: 0; width: 56px; height: 56px; margin-bottom: 0; }
+  .eco-connector { flex-direction: row; min-width: unset; padding: 0 16px; }
+  .eco-line { height: 40px; width: 2px; }
+  .eco-pulse { width: 6px; height: 60px; left: -2px; top: -60px; animation: eco-flow-v 1.8s linear infinite; }
+  @keyframes eco-flow-v { from { top: -60px; } to { top: 100%; } }
+  .eco-proto { writing-mode: vertical-rl; text-orientation: mixed; }
+  .eco-outcomes { grid-template-columns: 1fr; }
+  .eco-desc { max-width: none; }
+}
+
+/* ==========================================================================
+   CERTIFICATIONS ROW
+   ========================================================================== */
+.cert-section {
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 40px 0;
+}
+
+.cert-label {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+.cert-badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cert-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 16px 20px;
+  min-width: 100px;
+}
+
+.cert-badge-mark {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  transition: transform 0.2s var(--ease), box-shadow 0.2s;
+}
+.cert-badge:hover .cert-badge-mark {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.cert-badge-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.cert-badge-desc {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-align: center;
+  letter-spacing: 0.2px;
+}
+
+.cert-divider {
+  width: 1px;
+  height: 48px;
+  background: var(--border);
+  flex-shrink: 0;
+  margin: 0 4px;
+}
+
+@media (max-width: 768px) {
+  .cert-divider { display: none; }
+  .cert-badge { min-width: 80px; padding: 12px; }
+}
+
+/* ==========================================================================
+   CLIENT LOGO WALL
+   ========================================================================== */
+.client-wall-section {
+  background: var(--off-white, #f8f9fa);
+  padding: var(--section-py) 0;
+  border-top: 1px solid var(--border);
+}
+
+.client-wall-header {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto 56px;
+}
+
+.client-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.client-logo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 28px 16px;
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  gap: 10px;
+  transition: transform 0.2s var(--ease), box-shadow 0.2s, border-color 0.2s;
+}
+.client-logo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--sky);
+}
+
+.client-logo-mark {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+.client-logo-card:hover .client-logo-mark { opacity: 1; }
+
+.client-logo-sector {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.client-logo-region {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.client-logo-solution {
+  font-size: 10px;
+  color: var(--sky);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.client-wall-note {
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+@media (max-width: 900px) {
+  .client-logos-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 560px) {
+  .client-logos-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ==========================================================================
+   DOWNLOAD COMPANY PROFILE BUTTON
+   ========================================================================== */
+.btn-download-profile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 24px;
+  padding: 18px 24px;
+  background: rgba(255,255,255,0.05);
+  border: 1.5px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius-md);
+  color: var(--white);
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  flex-shrink: 0;
+}
+.btn-download-profile:hover {
+  background: rgba(0,190,220,0.1);
+  border-color: var(--sky);
+  transform: translateY(-2px);
+}
+.btn-download-profile svg {
+  flex-shrink: 0;
+  color: var(--sky);
+}
+.btn-download-profile-sub {
+  display: block;
+  font-size: 11px;
+  color: rgba(255,255,255,0.45);
+  margin-top: 2px;
+  font-weight: 400;
+}
+.btn-download-profile > span:last-child { /* text group */
+  display: flex;
+  flex-direction: column;
+}
+.btn-download-profile > span:not(.btn-download-profile-sub) {
+  font-size: 14px;
+  font-weight: 700;
+}
