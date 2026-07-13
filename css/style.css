@@ -153,13 +153,13 @@ input, textarea, select { font-family: inherit; }
 }
 
 .nav-logo-img {
-  height: 44px;
+  height: 70px;
   width: auto;
   display: block;
 }
 
 .footer-logo-img {
-  height: 52px;
+  height: 80px;
   width: auto;
   display: block;
 }
