@@ -7,41 +7,41 @@
 
 /* --- CSS Custom Properties --- */
 :root {
-  /* Brand Colors */
-  --forest:      #0B3D2E;   /* Primary dark green */
-  --forest-mid:  #155C43;   /* Mid green */
-  --forest-light:#1F7A57;   /* Light green */
-  --sky:         #48CAE4;   /* Brand accent blue */
-  --sky-light:   #ADE8F4;   /* Light blue */
-  --sky-pale:    #E0F7FF;   /* Pale blue background */
-  --teal:        #0B7FA5;   /* Deep teal */
+  /* Brand Colors — Siemens Teal Edition */
+  --forest:      #00112B;   /* Primary dark navy */
+  --forest-mid:  #002B5C;   /* Mid navy */
+  --forest-light:#004B8C;   /* Light navy */
+  --sky:         #00BEDC;   /* Brand accent electric teal */
+  --sky-light:   #66D9EE;   /* Light teal */
+  --sky-pale:    #E0F7FC;   /* Pale teal background */
+  --teal:        #009999;   /* Deep teal */
   --white:       #FFFFFF;
-  --off-white:   #F7FAFB;
-  --light-grey:  #EDF2F4;
+  --off-white:   #F4F8FB;
+  --light-grey:  #EDF2F6;
   --mid-grey:    #8D99AE;
-  --dark-grey:   #2B2D42;
-  --text-primary:#0B1F18;   /* Very dark green-black */
-  --text-secondary: #3D5A4C;
-  --text-muted:  #6B8C7E;
+  --dark-grey:   #1B2A3B;
+  --text-primary:#0A1628;   /* Very dark navy-black */
+  --text-secondary: #1F3766;
+  --text-muted:  #5A7A99;
 
   /* Semantic */
-  --bg-page:     #F7FAFB;
-  --bg-dark:     #061A12;   /* Hero / dark sections */
+  --bg-page:     #F4F8FB;
+  --bg-dark:     #000B1A;   /* Hero / dark sections */
   --bg-card:     #FFFFFF;
-  --border:      rgba(11, 61, 46, 0.10);
+  --border:      rgba(0, 17, 43, 0.10);
 
   /* Gradients */
-  --grad-hero:   linear-gradient(135deg, #061A12 0%, #0B3D2E 50%, #0B5C3C 100%);
-  --grad-accent: linear-gradient(135deg, #48CAE4, #0B7FA5);
-  --grad-green:  linear-gradient(135deg, #0B3D2E, #1F7A57);
-  --grad-card:   linear-gradient(145deg, #FFFFFF 0%, #EDF8F3 100%);
+  --grad-hero:   linear-gradient(135deg, #000B1A 0%, #00112B 55%, #007993 100%);
+  --grad-accent: linear-gradient(135deg, #00BEDC, #009999);
+  --grad-green:  linear-gradient(135deg, #00112B, #004B8C);
+  --grad-card:   linear-gradient(145deg, #FFFFFF 0%, #EDF5FB 100%);
 
   /* Shadows */
-  --shadow-sm:   0 1px 3px rgba(11,61,46,0.08), 0 1px 2px rgba(11,61,46,0.06);
-  --shadow-md:   0 4px 16px rgba(11,61,46,0.10), 0 2px 6px rgba(11,61,46,0.06);
-  --shadow-lg:   0 10px 40px rgba(11,61,46,0.14), 0 4px 14px rgba(11,61,46,0.08);
-  --shadow-xl:   0 20px 60px rgba(11,61,46,0.18);
-  --shadow-glow: 0 0 30px rgba(72,202,228,0.25);
+  --shadow-sm:   0 1px 3px rgba(0,17,43,0.08), 0 1px 2px rgba(0,17,43,0.06);
+  --shadow-md:   0 4px 16px rgba(0,17,43,0.10), 0 2px 6px rgba(0,17,43,0.06);
+  --shadow-lg:   0 10px 40px rgba(0,17,43,0.14), 0 4px 14px rgba(0,17,43,0.08);
+  --shadow-xl:   0 20px 60px rgba(0,17,43,0.18);
+  --shadow-glow: 0 0 30px rgba(0,190,220,0.28);
 
   /* Typography */
   --font-display: 'Outfit', system-ui, sans-serif;
