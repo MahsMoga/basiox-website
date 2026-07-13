@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 72" role="img" aria-label="Bardac drives">
+  <text x="8" y="40"
+    font-family="Arial, Helvetica, sans-serif"
+    font-weight="700" font-size="28"
+    font-style="italic"
+    fill="#E8303A">Bardac</text>
+  <text x="18" y="62"
+    font-family="Arial, Helvetica, sans-serif"
+    font-weight="700" font-size="24"
+    font-style="italic"
+    fill="#E8303A">drives</text>
+</svg>

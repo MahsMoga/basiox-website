@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" role="img" aria-label="QUNDIS">
+  <!-- Navy background -->
+  <rect width="200" height="60" fill="#003057" rx="4"/>
+  <!-- Orange diagonal wedge on left -->
+  <polygon points="0,0 62,0 44,60 0,60" fill="#F07020"/>
+  <!-- Q in white on the orange area -->
+  <text x="22" y="44"
+    font-family="Arial Black, Arial, sans-serif"
+    font-weight="900" font-size="42"
+    fill="#ffffff"
+    text-anchor="middle">Q</text>
+  <!-- UNDiS in white on navy -->
+  <text x="128" y="43"
+    font-family="Arial Black, Arial, sans-serif"
+    font-weight="900" font-size="36"
+    fill="#ffffff"
+    text-anchor="middle">UNDiS</text>
+</svg>

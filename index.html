@@ -38,7 +38,7 @@
 
       <!-- Logo -->
       <a href="#hero" class="nav-logo" aria-label="Basiox Controls home">
-        <img src="images/logo-white.png" alt="Basiox Controls" class="nav-logo-img">
+        <img src="images/logo-white-hires.png" alt="Basiox Controls" class="nav-logo-img">
       </a>
 
       <!-- Nav Links -->
@@ -88,6 +88,9 @@
      HERO
      =================================================================== -->
 <section id="hero">
+  <!-- Real photography background -->
+  <div class="hero-photo-bg" style="background-image:url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=80&auto=format&fit=crop')"></div>
+  <div class="hero-photo-overlay"></div>
   <div class="hero-canvas">
     <div class="hero-grid"></div>
     <div class="hero-orb hero-orb-1" style="background:radial-gradient(circle,#00BEDC,transparent)"></div>
@@ -197,83 +200,156 @@
       <h2 class="partners-title">World-Class Brands.<br>Regional Expertise.</h2>
       <p class="partners-sub">We partner exclusively with globally certified manufacturers — bringing the best of European, American and Asian engineering technology to your doorstep.</p>
     </div>
-    <div class="partner-cards-grid">
+    <div class="partner-marquee-wrapper">
+      <div class="partner-marquee-track">
 
-      <!-- QUNDIS -->
-      <div class="partner-showcase-card reveal">
-        <div class="partner-showcase-accent" style="background:linear-gradient(135deg,#003087,#0060C0)"></div>
-        <div class="partner-showcase-icon" style="background:linear-gradient(135deg,#003087,#0060C0)">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        <!-- QUNDIS -->
+        <div class="partner-showcase-card">
+          <div class="partner-showcase-accent" style="background:linear-gradient(135deg,#F07020,#003057)"></div>
+          <div class="partner-showcase-icon partner-logo-box" style="padding:0;overflow:hidden;">
+            <img src="images/partners/qundis.svg" alt="QUNDIS" class="partner-logo-img">
+          </div>
+          <div class="partner-showcase-flag">🇩🇪</div>
+          <div class="partner-showcase-name">QUNDIS</div>
+          <div class="partner-showcase-country">Germany · Since 1999</div>
+          <p class="partner-showcase-desc">Europe's leading manufacturer of smart heat, water and energy meters. MID-certified precision metering trusted across 50+ countries.</p>
+          <div class="partner-showcase-tags">
+            <span>BTU Meters</span><span>Water Meters</span><span>M-Bus</span><span>LoRaWAN</span>
+          </div>
         </div>
-        <div class="partner-showcase-flag">🇩🇪</div>
-        <div class="partner-showcase-name">QUNDIS</div>
-        <div class="partner-showcase-country">Germany · Since 1999</div>
-        <p class="partner-showcase-desc">Europe's leading manufacturer of smart heat, water and energy meters. MID-certified precision metering trusted across 50+ countries.</p>
-        <div class="partner-showcase-tags">
-          <span>BTU Meters</span><span>Water Meters</span><span>M-Bus</span><span>LoRaWAN</span>
+
+        <!-- maddalena -->
+        <div class="partner-showcase-card">
+          <div class="partner-showcase-accent" style="background:linear-gradient(135deg,#CC0000,#E63333)"></div>
+          <div class="partner-showcase-icon partner-logo-box">
+            <img src="images/partners/maddalena.svg" alt="maddalena" class="partner-logo-img">
+          </div>
+          <div class="partner-showcase-flag">🇮🇹</div>
+          <div class="partner-showcase-name">maddalena</div>
+          <div class="partner-showcase-country">Italy · Since 1919</div>
+          <p class="partner-showcase-desc">Over a century of precision flow measurement excellence. Class C certified water meters trusted by utilities and building operators worldwide.</p>
+          <div class="partner-showcase-tags">
+            <span>Cold Water</span><span>Hot Water</span><span>Class C</span><span>MID</span>
+          </div>
         </div>
+
+        <!-- Bardac drives -->
+        <div class="partner-showcase-card">
+          <div class="partner-showcase-accent" style="background:linear-gradient(135deg,#E8303A,#ff6066)"></div>
+          <div class="partner-showcase-icon partner-logo-box" style="background:#f2f2f2 !important;">
+            <img src="images/partners/bardac.svg" alt="Bardac drives" class="partner-logo-img">
+          </div>
+          <div class="partner-showcase-flag">🇺🇸</div>
+          <div class="partner-showcase-name">Bardac drives</div>
+          <div class="partner-showcase-country">USA · Industrial Drives</div>
+          <p class="partner-showcase-desc">American-engineered AC and DC variable speed drives, servo systems and PLCs. Trusted for demanding industrial applications up to 2000+ HP.</p>
+          <div class="partner-showcase-tags">
+            <span>PLC</span><span>HMI Panels</span><span>AC Drives</span><span>DC Drives</span>
+          </div>
+        </div>
+
+        <!-- atomixAIR -->
+        <div class="partner-showcase-card">
+          <div class="partner-showcase-accent" style="background:linear-gradient(135deg,#00112B,#004B8C)"></div>
+          <div class="partner-showcase-icon partner-logo-box">
+            <img src="images/partners/atomixair.png" alt="atomixAIR" class="partner-logo-img">
+          </div>
+          <div class="partner-showcase-flag">🌐</div>
+          <div class="partner-showcase-name">atomixAIR</div>
+          <div class="partner-showcase-country">Global · Diffusion Technology</div>
+          <p class="partner-showcase-desc">Pioneering Dynamic Diffusion Technology for HVAC optimisation. Intelligent air distribution that maximises comfort while minimising energy use.</p>
+          <div class="partner-showcase-tags">
+            <span>Dynamic Diffusion</span><span>HVAC</span><span>Air Quality</span>
+          </div>
+        </div>
+
+        <!-- Vaayu -->
+        <div class="partner-showcase-card">
+          <div class="partner-showcase-accent" style="background:linear-gradient(135deg,#1A7A4A,#2EA868)"></div>
+          <div class="partner-showcase-icon partner-logo-box">
+            <img src="images/partners/vaayu.svg" alt="Vaayu FAHUs" class="partner-logo-img">
+          </div>
+          <div class="partner-showcase-flag">🇮🇳</div>
+          <div class="partner-showcase-name">Vaayu FAHUs</div>
+          <div class="partner-showcase-country">India · Net Zero Solutions</div>
+          <p class="partner-showcase-desc">Hybrid Fresh Air Handling Units delivering up to 70% energy savings. The net-zero FAHU solution for sustainable buildings and data centres.</p>
+          <div class="partner-showcase-tags">
+            <span>FAHUs</span><span>Net Zero</span><span>70% Savings</span><span>Hybrid</span>
+          </div>
+        </div>
+
+        <!-- DUPLICATE SET for seamless loop -->
+        <div class="partner-showcase-card" aria-hidden="true">
+          <div class="partner-showcase-accent" style="background:linear-gradient(135deg,#F07020,#003057)"></div>
+          <div class="partner-showcase-icon partner-logo-box" style="padding:0;overflow:hidden;">
+            <img src="images/partners/qundis.svg" alt="" class="partner-logo-img">
+          </div>
+          <div class="partner-showcase-flag">🇩🇪</div>
+          <div class="partner-showcase-name">QUNDIS</div>
+          <div class="partner-showcase-country">Germany · Since 1999</div>
+          <p class="partner-showcase-desc">Europe's leading manufacturer of smart heat, water and energy meters. MID-certified precision metering trusted across 50+ countries.</p>
+          <div class="partner-showcase-tags">
+            <span>BTU Meters</span><span>Water Meters</span><span>M-Bus</span><span>LoRaWAN</span>
+          </div>
+        </div>
+
+        <div class="partner-showcase-card" aria-hidden="true">
+          <div class="partner-showcase-accent" style="background:linear-gradient(135deg,#CC0000,#E63333)"></div>
+          <div class="partner-showcase-icon partner-logo-box">
+            <img src="images/partners/maddalena.svg" alt="" class="partner-logo-img">
+          </div>
+          <div class="partner-showcase-flag">🇮🇹</div>
+          <div class="partner-showcase-name">maddalena</div>
+          <div class="partner-showcase-country">Italy · Since 1919</div>
+          <p class="partner-showcase-desc">Over a century of precision flow measurement excellence. Class C certified water meters trusted by utilities and building operators worldwide.</p>
+          <div class="partner-showcase-tags">
+            <span>Cold Water</span><span>Hot Water</span><span>Class C</span><span>MID</span>
+          </div>
+        </div>
+
+        <div class="partner-showcase-card" aria-hidden="true">
+          <div class="partner-showcase-accent" style="background:linear-gradient(135deg,#E8303A,#ff6066)"></div>
+          <div class="partner-showcase-icon partner-logo-box" style="background:#f2f2f2 !important;">
+            <img src="images/partners/bardac.svg" alt="" class="partner-logo-img">
+          </div>
+          <div class="partner-showcase-flag">🇺🇸</div>
+          <div class="partner-showcase-name">Bardac drives</div>
+          <div class="partner-showcase-country">USA · Industrial Drives</div>
+          <p class="partner-showcase-desc">American-engineered AC and DC variable speed drives, servo systems and PLCs. Trusted for demanding industrial applications up to 2000+ HP.</p>
+          <div class="partner-showcase-tags">
+            <span>PLC</span><span>HMI Panels</span><span>AC Drives</span><span>DC Drives</span>
+          </div>
+        </div>
+
+        <div class="partner-showcase-card" aria-hidden="true">
+          <div class="partner-showcase-accent" style="background:linear-gradient(135deg,#00112B,#004B8C)"></div>
+          <div class="partner-showcase-icon partner-logo-box">
+            <img src="images/partners/atomixair.png" alt="" class="partner-logo-img">
+          </div>
+          <div class="partner-showcase-flag">🌐</div>
+          <div class="partner-showcase-name">atomixAIR</div>
+          <div class="partner-showcase-country">Global · Diffusion Technology</div>
+          <p class="partner-showcase-desc">Pioneering Dynamic Diffusion Technology for HVAC optimisation. Intelligent air distribution that maximises comfort while minimising energy use.</p>
+          <div class="partner-showcase-tags">
+            <span>Dynamic Diffusion</span><span>HVAC</span><span>Air Quality</span>
+          </div>
+        </div>
+
+        <div class="partner-showcase-card" aria-hidden="true">
+          <div class="partner-showcase-accent" style="background:linear-gradient(135deg,#1A7A4A,#2EA868)"></div>
+          <div class="partner-showcase-icon partner-logo-box">
+            <img src="images/partners/vaayu.svg" alt="" class="partner-logo-img">
+          </div>
+          <div class="partner-showcase-flag">🇮🇳</div>
+          <div class="partner-showcase-name">Vaayu FAHUs</div>
+          <div class="partner-showcase-country">India · Net Zero Solutions</div>
+          <p class="partner-showcase-desc">Hybrid Fresh Air Handling Units delivering up to 70% energy savings. The net-zero FAHU solution for sustainable buildings and data centres.</p>
+          <div class="partner-showcase-tags">
+            <span>FAHUs</span><span>Net Zero</span><span>70% Savings</span><span>Hybrid</span>
+          </div>
+        </div>
+
       </div>
-
-      <!-- maddalena -->
-      <div class="partner-showcase-card reveal">
-        <div class="partner-showcase-accent" style="background:linear-gradient(135deg,#008751,#00A86B)"></div>
-        <div class="partner-showcase-icon" style="background:linear-gradient(135deg,#008751,#00A86B)">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/><circle cx="18" cy="6" r="3"/></svg>
-        </div>
-        <div class="partner-showcase-flag">🇮🇹</div>
-        <div class="partner-showcase-name">maddalena</div>
-        <div class="partner-showcase-country">Italy · Since 1919</div>
-        <p class="partner-showcase-desc">Over a century of precision flow measurement excellence. Class C certified water meters trusted by utilities and building operators worldwide.</p>
-        <div class="partner-showcase-tags">
-          <span>Cold Water</span><span>Hot Water</span><span>Class C</span><span>MID</span>
-        </div>
-      </div>
-
-      <!-- Bardac Automation -->
-      <div class="partner-showcase-card reveal">
-        <div class="partner-showcase-accent" style="background:linear-gradient(135deg,#B03A00,#E05A00)"></div>
-        <div class="partner-showcase-icon" style="background:linear-gradient(135deg,#B03A00,#E05A00)">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h2v5H7zM11 6h2v7h-2zM15 9h2v4h-2z"/></svg>
-        </div>
-        <div class="partner-showcase-flag">🇺🇸</div>
-        <div class="partner-showcase-name">Bardac Automation</div>
-        <div class="partner-showcase-country">USA · Industrial Controls</div>
-        <p class="partner-showcase-desc">American-engineered PLCs, HMI panels and industrial drives. From smarty controllers to AC/DC drives up to 2000+ HP for demanding applications.</p>
-        <div class="partner-showcase-tags">
-          <span>PLC</span><span>HMI Panels</span><span>AC Drives</span><span>DC Drives</span>
-        </div>
-      </div>
-
-      <!-- atomixAIR -->
-      <div class="partner-showcase-card reveal">
-        <div class="partner-showcase-accent" style="background:linear-gradient(135deg,#00112B,#004B8C)"></div>
-        <div class="partner-showcase-icon" style="background:linear-gradient(135deg,#00112B,#004B8C)">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
-        </div>
-        <div class="partner-showcase-flag">🌐</div>
-        <div class="partner-showcase-name">atomixAIR</div>
-        <div class="partner-showcase-country">Global · Diffusion Technology</div>
-        <p class="partner-showcase-desc">Pioneering Dynamic Diffusion Technology for HVAC optimisation. Intelligent air distribution that maximises comfort while minimising energy use.</p>
-        <div class="partner-showcase-tags">
-          <span>Dynamic Diffusion</span><span>HVAC</span><span>Air Quality</span>
-        </div>
-      </div>
-
-      <!-- Vaayu -->
-      <div class="partner-showcase-card reveal">
-        <div class="partner-showcase-accent" style="background:linear-gradient(135deg,#5B21B6,#7C3AED)"></div>
-        <div class="partner-showcase-icon" style="background:linear-gradient(135deg,#5B21B6,#7C3AED)">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg>
-        </div>
-        <div class="partner-showcase-flag">🇮🇳</div>
-        <div class="partner-showcase-name">Vaayu FAHUs</div>
-        <div class="partner-showcase-country">India · Net Zero Solutions</div>
-        <p class="partner-showcase-desc">Hybrid Fresh Air Handling Units delivering up to 70% energy savings. The net-zero FAHU solution for sustainable buildings and data centres.</p>
-        <div class="partner-showcase-tags">
-          <span>FAHUs</span><span>Net Zero</span><span>70% Savings</span><span>Hybrid</span>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
@@ -288,24 +364,15 @@
 
       <!-- Visual -->
       <div class="about-visual reveal">
-        <div class="about-image-card">
-          <div class="about-visual-inner">
-            <div class="about-mini-card">
-              <div class="about-mini-num">35<sup>+</sup></div>
-              <div class="about-mini-label">Successful Projects</div>
-            </div>
-            <div class="about-mini-card">
-              <div class="about-mini-num">95<sup>%</sup></div>
-              <div class="about-mini-label">Client Satisfaction</div>
-            </div>
-            <div class="about-mini-card">
-              <div class="about-mini-num">4</div>
-              <div class="about-mini-label">Global Regions</div>
-            </div>
-            <div class="about-mini-card">
-              <div class="about-mini-num">5<sup>+</sup></div>
-              <div class="about-mini-label">Years Experience</div>
-            </div>
+        <div class="about-photo-wrap">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=900&q=85&auto=format&fit=crop" alt="Engineer working on smart building systems" class="about-photo">
+          <div class="about-photo-stat-card">
+            <div class="about-photo-stat-num">35<sup>+</sup></div>
+            <div class="about-photo-stat-label">Projects Delivered</div>
+          </div>
+          <div class="about-photo-stat-card about-photo-stat-card--2">
+            <div class="about-photo-stat-num">95<sup>%</sup></div>
+            <div class="about-photo-stat-label">Client Satisfaction</div>
           </div>
         </div>
         <div class="about-badge-floating">
@@ -950,7 +1017,8 @@
 
     <div class="industries-grid">
 
-      <div class="industry-card reveal">
+      <div class="industry-card reveal" style="background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80&auto=format&fit=crop')">
+        <div class="industry-card-overlay"></div>
         <div class="industry-icon">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16m14 0h2m-2 0H5m-2 0h2M9 7h1m-1 4h1m4-4h1m-1 4h1"/></svg>
         </div>
@@ -963,7 +1031,8 @@
         </div>
       </div>
 
-      <div class="industry-card reveal reveal-delay-1">
+      <div class="industry-card reveal reveal-delay-1" style="background-image:url('https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800&q=80&auto=format&fit=crop')">
+        <div class="industry-card-overlay"></div>
         <div class="industry-icon">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
         </div>
@@ -976,7 +1045,8 @@
         </div>
       </div>
 
-      <div class="industry-card reveal reveal-delay-2">
+      <div class="industry-card reveal reveal-delay-2" style="background-image:url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80&auto=format&fit=crop')">
+        <div class="industry-card-overlay"></div>
         <div class="industry-icon">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
         </div>
@@ -989,7 +1059,8 @@
         </div>
       </div>
 
-      <div class="industry-card reveal reveal-delay-3">
+      <div class="industry-card reveal reveal-delay-3" style="background-image:url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80&auto=format&fit=crop')">
+        <div class="industry-card-overlay"></div>
         <div class="industry-icon">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         </div>
@@ -1002,7 +1073,8 @@
         </div>
       </div>
 
-      <div class="industry-card reveal">
+      <div class="industry-card reveal" style="background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80&auto=format&fit=crop')">
+        <div class="industry-card-overlay"></div>
         <div class="industry-icon">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20M4 20V10l8-7 8 7v10"/><path d="M10 20v-5h4v5"/><circle cx="12" cy="7" r="1"/></svg>
         </div>
@@ -1015,7 +1087,8 @@
         </div>
       </div>
 
-      <div class="industry-card reveal reveal-delay-1">
+      <div class="industry-card reveal reveal-delay-1" style="background-image:url('https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80&auto=format&fit=crop')">
+        <div class="industry-card-overlay"></div>
         <div class="industry-icon">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
         </div>
@@ -1062,7 +1135,7 @@
 <!-- ===================================================================
      STATS
      =================================================================== -->
-<section id="stats" class="section" style="background: var(--grad-hero); padding: 80px 0;">
+<section id="stats" class="section stats-photo-section" style="padding: 80px 0;">
   <div class="container">
     <div class="stats-grid">
       <div class="stat-item reveal">
