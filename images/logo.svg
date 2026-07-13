@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 318 82" fill="none" role="img" aria-label="Basiox Controls">
+  <title>Basiox Controls</title>
+
+  <!-- B -->
+  <text x="0" y="64"
+    font-family="Outfit, system-ui, sans-serif"
+    font-weight="800" font-size="64"
+    fill="#00112B">B</text>
+
+  <!-- Custom A  (apex at 104,6 · base 78–130) -->
+  <!-- Left leg -->
+  <line x1="104" y1="6" x2="78" y2="64"
+    stroke="#00112B" stroke-width="8.5" stroke-linecap="round"/>
+  <!-- Right leg -->
+  <line x1="104" y1="6" x2="130" y2="64"
+    stroke="#00112B" stroke-width="8.5" stroke-linecap="round"/>
+  <!-- Crossbar -->
+  <line x1="87" y1="42" x2="121" y2="42"
+    stroke="#00112B" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- Signal / broadcast arcs from apex (104, 6) — sky teal -->
+  <!-- Arc 1 (inner) -->
+  <path d="M96,6 A11,11 0 0,1 112,6"
+    stroke="#00BEDC" stroke-width="4" stroke-linecap="round"/>
+  <!-- Arc 2 (middle) -->
+  <path d="M89,2 A18,18 0 0,1 119,2"
+    stroke="#00BEDC" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Arc 3 (outer) -->
+  <path d="M82,0 A25,25 0 0,0 82,0
+           M82,-1 A26,26 0 0,1 126,-1"
+    stroke="#00BEDC" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- S I O X -->
+  <text x="132" y="64"
+    font-family="Outfit, system-ui, sans-serif"
+    font-weight="800" font-size="64"
+    fill="#00112B">SIOX</text>
+
+  <!-- CONTROLS -->
+  <text x="132" y="79"
+    font-family="Outfit, system-ui, sans-serif"
+    font-weight="600" font-size="12"
+    fill="#00112B" letter-spacing="5">CONTROLS</text>
+</svg>
