@@ -86,17 +86,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- RFQ Form submission ---
+  // --- RFQ Form — client-side validation only, FormSubmit.co handles delivery ---
   const form = document.getElementById('rfq-form');
   form?.addEventListener('submit', (e) => {
-    e.preventDefault();
+    const required = form.querySelectorAll('[required]');
+    let valid = true;
+    required.forEach(field => {
+      if (!field.value.trim()) {
+        field.style.borderColor = '#f87171';
+        valid = false;
+      } else {
+        field.style.borderColor = '';
+      }
+    });
+    if (!valid) {
+      e.preventDefault();
+      return;
+    }
     const btn = form.querySelector('.form-submit');
     btn.textContent = 'Sending…';
     btn.disabled = true;
-    setTimeout(() => {
-      form.style.display = 'none';
-      document.querySelector('.form-success')?.classList.add('show');
-    }, 1200);
   });
 
   // --- Smooth active nav link highlight ---
