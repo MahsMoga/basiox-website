@@ -2772,7 +2772,7 @@ footer {
   z-index: 1;
 }
 
-/* White credential cards */
+/* Credential cards — each tinted to its badge colour */
 .cert-badge {
   display: flex;
   flex-direction: column;
@@ -2780,28 +2780,37 @@ footer {
   gap: 10px;
   padding: 28px 20px 20px;
   min-width: 118px;
-  background: #ffffff;
+  background: #F0F6FF;
   border-radius: 18px;
-  box-shadow: 0 2px 12px rgba(0,50,100,0.08), 0 1px 3px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 2px 12px rgba(0,50,100,0.07), 0 1px 3px rgba(0,0,0,0.05);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   cursor: default;
   position: relative;
   overflow: hidden;
 }
 
-/* Coloured top strip per card — using border-top colour from the mark */
-.cert-badge::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 4px;
-  background: currentColor;
-  opacity: 0.9;
-}
+/* No pseudo strip — removed */
+.cert-badge::before { display: none; }
+
+/* CE Marking — blue */
+.cert-badge:nth-child(1) { background: #EEF3FF; }
+/* RoHS — red */
+.cert-badge:nth-child(3) { background: #FFF0F2; }
+/* ISO 9001 — green */
+.cert-badge:nth-child(5) { background: #EDFAF3; }
+/* MID Certified — amber */
+.cert-badge:nth-child(7) { background: #FFF8EC; }
+/* BACnet — purple */
+.cert-badge:nth-child(9) { background: #F5EEFF; }
+/* Modbus — teal */
+.cert-badge:nth-child(11) { background: #EAF7FA; }
+/* LoRaWAN — sky */
+.cert-badge:nth-child(13) { background: #E8F9FD; }
 
 .cert-badge:hover {
   transform: translateY(-7px);
-  box-shadow: 0 16px 48px rgba(0,50,100,0.14), 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 16px 48px rgba(0,50,100,0.13), 0 4px 12px rgba(0,0,0,0.08);
 }
 
 .cert-badge-mark {
