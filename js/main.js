@@ -72,17 +72,25 @@ document.addEventListener('DOMContentLoaded', () => {
     requestAnimationFrame(update);
   }
 
-  // --- Solutions tabs ---
-  const tabs = document.querySelectorAll('.sol-tab');
-  const panels = document.querySelectorAll('.sol-panel');
+  // --- Solution card → drawer toggle ---
+  document.querySelectorAll('.sol-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const key = card.dataset.sol;
+      const drawer = document.getElementById('drawer-' + key);
+      if (!drawer) return;
 
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      const target = tab.dataset.tab;
-      tabs.forEach(t => t.classList.remove('active'));
-      panels.forEach(p => p.classList.remove('active'));
-      tab.classList.add('active');
-      document.getElementById('sol-' + target)?.classList.add('active');
+      const isOpen = card.classList.contains('active');
+
+      // Close all
+      document.querySelectorAll('.sol-card').forEach(c => c.classList.remove('active'));
+      document.querySelectorAll('.sol-drawer').forEach(d => d.classList.remove('open'));
+
+      if (!isOpen) {
+        card.classList.add('active');
+        drawer.classList.add('open');
+        // Smooth scroll so drawer is visible
+        setTimeout(() => drawer.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 50);
+      }
     });
   });
 

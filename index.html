@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css?v=20250714b">
+  <link rel="stylesheet" href="css/style.css?v=20250714c">
 
   <!-- Favicon placeholder -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%230B3D2E'/%3E%3Cpath d='M10 22 L16 10 L22 22 M13 18 L19 18' stroke='%2348CAE4' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
@@ -517,115 +517,144 @@
 
 
 <!-- ===================================================================
-     SOLUTIONS (Tabbed)
+     SOLUTIONS — unified grid + detail drawer
      =================================================================== -->
-<section id="solutions" class="section section-mid">
+<section id="solutions" class="section sol-unified">
   <div class="container">
     <div class="section-header reveal">
       <div class="eyebrow">Our Solutions</div>
-      <h2 class="section-title">Five Pillars of Intelligent Infrastructure</h2>
-      <p class="section-body">Each solution pillar is a complete ecosystem — hardware, software, integration and support — designed to work together or independently within your existing infrastructure.</p>
+      <h2 class="section-title">Every System. One Partner.</h2>
+      <p class="section-body">Six integrated solution pillars — each a complete ecosystem of hardware, software and support, designed to work together or independently within your existing infrastructure.</p>
     </div>
 
-    <!-- Tabs -->
-    <div class="solutions-tabs" role="tablist">
-      <button class="sol-tab active" role="tab" data-tab="metering" aria-selected="true">Smart Metering</button>
-      <button class="sol-tab" role="tab" data-tab="safety" aria-selected="false">Safety & IAQ</button>
-      <button class="sol-tab" role="tab" data-tab="air" aria-selected="false">Air Purification</button>
-      <button class="sol-tab" role="tab" data-tab="energy" aria-selected="false">Energy Solutions</button>
-      <button class="sol-tab" role="tab" data-tab="automation" aria-selected="false">PLC & Automation</button>
-    </div>
+    <!-- 6-card solution grid -->
+    <div class="sol-grid reveal">
 
-    <!-- Panel 1: Smart Metering -->
-    <div class="sol-panel active" id="sol-metering" role="tabpanel">
-      <div class="sol-panel-inner">
-        <div class="sol-panel-visual">
-          <div class="sol-visual-icon">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#48CAE4" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/><path d="M2 12h2M20 12h2M12 2v2M12 20v2"/></svg>
-          </div>
-          <div class="sol-visual-title">Smart Metering<br>Solutions</div>
-          <div class="sol-visual-sub">Complete sub-metering & billing ecosystem</div>
-          <div class="sol-visual-number">01</div>
-          <div class="sol-visual-tags">
-            <span class="sol-tag">BTU Meters</span>
-            <span class="sol-tag">Water Meters</span>
-            <span class="sol-tag">M-Bus</span>
-            <span class="sol-tag">LoRaWAN</span>
-            <span class="sol-tag">QUNDIS</span>
-            <span class="sol-tag">maddalena</span>
-          </div>
+      <!-- Card 01: Smart Metering -->
+      <div class="sol-card" data-sol="metering">
+        <div class="sol-card-head" style="background:linear-gradient(135deg,#003A50 0%,#006A7A 100%)">
+          <div class="sol-card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#48CAE4" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/><path d="M2 12h2M20 12h2"/></svg></div>
+          <div class="sol-card-num">01</div>
         </div>
-        <div class="sol-text">
+        <div class="sol-card-body">
+          <h3 class="sol-card-title">Smart Metering &amp; Sub-Billing</h3>
+          <p class="sol-card-desc">BTU meters, water meters, M-Bus masters, smart shut-off valves and automated tenant billing — QUNDIS &amp; maddalena.</p>
+          <div class="sol-card-tags"><span>BTU Meters</span><span>LoRaWAN</span><span>Billing Software</span></div>
+          <button class="sol-card-toggle" aria-expanded="false">Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+        </div>
+      </div>
+
+      <!-- Card 02: Safety & IAQ -->
+      <div class="sol-card" data-sol="safety">
+        <div class="sol-card-head" style="background:linear-gradient(135deg,#0D1B2A 0%,#1B3A4B 100%)">
+          <div class="sol-card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF6B6B" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+          <div class="sol-card-num">02</div>
+        </div>
+        <div class="sol-card-body">
+          <h3 class="sol-card-title">Gas &amp; IAQ Safety</h3>
+          <p class="sol-card-desc">Real-time CO, CO₂, NO₂, PM2.5 detection, virus &amp; mold sensors, SOS panic alarms and BMS integration gateways.</p>
+          <div class="sol-card-tags"><span>CO &amp; CO₂</span><span>PM2.5</span><span>SOS Alarm</span></div>
+          <button class="sol-card-toggle" aria-expanded="false">Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+        </div>
+      </div>
+
+      <!-- Card 03: Air Purification -->
+      <div class="sol-card" data-sol="air">
+        <div class="sol-card-head" style="background:linear-gradient(135deg,#0A2A3D 0%,#0D4A5E 100%)">
+          <div class="sol-card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#48CAE4" stroke-width="2"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg></div>
+          <div class="sol-card-num">03</div>
+        </div>
+        <div class="sol-card-body">
+          <h3 class="sol-card-title">Intelligent Air Purifiers</h3>
+          <p class="sol-card-desc">Multi-stage filtration for indoor and outdoor environments — removes formaldehyde, PM2.5, allergens and odours.</p>
+          <div class="sol-card-tags"><span>Indoor</span><span>Outdoor</span><span>Formaldehyde</span></div>
+          <button class="sol-card-toggle" aria-expanded="false">Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+        </div>
+      </div>
+
+      <!-- Card 04: Energy / FAHUs -->
+      <div class="sol-card" data-sol="energy">
+        <div class="sol-card-head" style="background:linear-gradient(135deg,#0B2D0E 0%,#1A5E1F 100%)">
+          <div class="sol-card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#90EE90" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+          <div class="sol-card-num">04</div>
+        </div>
+        <div class="sol-card-body">
+          <h3 class="sol-card-title">Hybrid FAHUs &amp; Cooling</h3>
+          <p class="sol-card-desc">Vaayu Hybrid FAHUs achieving 70% energy efficiency, radiant/hydronic cooling and atomixAIR dynamic diffusion.</p>
+          <div class="sol-card-tags"><span>70% Efficiency</span><span>Net Zero</span><span>Hydronic</span></div>
+          <button class="sol-card-toggle" aria-expanded="false">Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+        </div>
+      </div>
+
+      <!-- Card 05: PLC & Automation -->
+      <div class="sol-card" data-sol="automation">
+        <div class="sol-card-head" style="background:linear-gradient(135deg,#1A0A2E 0%,#3D1A6B 100%)">
+          <div class="sol-card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B47AFF" stroke-width="2"><rect x="2" y="2" width="9" height="9" rx="1"/><rect x="13" y="2" width="9" height="9" rx="1"/><rect x="13" y="13" width="9" height="9" rx="1"/><rect x="2" y="13" width="9" height="9" rx="1"/></svg></div>
+          <div class="sol-card-num">05</div>
+        </div>
+        <div class="sol-card-body">
+          <h3 class="sol-card-title">PLC, Drives &amp; HMI</h3>
+          <p class="sol-card-desc">Bardac Automation (USA) — smarty/speedy PLCs, savvyPanel HMIs, AC drives to 400HP, DC drives to 2000+ HP.</p>
+          <div class="sol-card-tags"><span>PLC</span><span>AC/DC Drives</span><span>HMI Panels</span></div>
+          <button class="sol-card-toggle" aria-expanded="false">Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+        </div>
+      </div>
+
+      <!-- Card 06: Energy Dashboard -->
+      <div class="sol-card" data-sol="dashboard">
+        <div class="sol-card-head" style="background:linear-gradient(135deg,#1A1200 0%,#4A3500 100%)">
+          <div class="sol-card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h2v5H7zM11 6h2v7h-2zM15 10h2v3h-2z"/></svg></div>
+          <div class="sol-card-num">06</div>
+        </div>
+        <div class="sol-card-body">
+          <h3 class="sol-card-title">Energy Dashboarding</h3>
+          <p class="sol-card-desc">Real-time monitoring and analytics platform — track, analyse and optimise energy across multiple systems and sites.</p>
+          <div class="sol-card-tags"><span>Real-Time</span><span>Multi-Site</span><span>Analytics</span></div>
+          <button class="sol-card-toggle" aria-expanded="false">Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+        </div>
+      </div>
+
+    </div><!-- /.sol-grid -->
+
+    <!-- Detail drawers (one per card, hidden by default) -->
+
+    <div class="sol-drawer" id="drawer-metering" style="--accent:#48CAE4">
+      <div class="sol-drawer-inner">
+        <div class="sol-drawer-visual" style="background:linear-gradient(135deg,#003A50 0%,#006A7A 100%)">
+          <div class="sol-visual-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#48CAE4" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/><path d="M2 12h2M20 12h2M12 2v2M12 20v2"/></svg></div>
+          <div class="sol-visual-title">Smart Metering<br>Solutions</div>
+          <div class="sol-visual-sub">Complete sub-metering &amp; billing ecosystem</div>
+          <div class="sol-visual-tags"><span>BTU Meters</span><span>Water Meters</span><span>M-Bus</span><span>LoRaWAN</span><span>QUNDIS</span><span>maddalena</span></div>
+        </div>
+        <div class="sol-drawer-content">
           <div class="eyebrow">Solution 01</div>
-          <h3 class="section-title">Precision Metering &amp; Billing</h3>
-          <p class="section-body">Basiox delivers a comprehensive smart metering ecosystem — from precision BTU and water meters to intelligent data collection and automated tenant billing — enabling building operators to monitor, allocate and reduce energy costs with total accuracy.</p>
+          <h3 class="sol-drawer-title">Precision Metering &amp; Billing</h3>
+          <p class="sol-drawer-body">Basiox delivers a comprehensive smart metering ecosystem — from precision BTU and water meters to intelligent data collection and automated tenant billing — enabling building operators to monitor, allocate and reduce energy costs with total accuracy.</p>
           <ul class="sol-features">
             <li class="sol-feature"><span class="sol-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>BTU &amp; Heat Meters — accurate thermal energy measurement</li>
             <li class="sol-feature"><span class="sol-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Precision Cold &amp; Hot Water Meters (Class C, MID-certified)</li>
             <li class="sol-feature"><span class="sol-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Clamp-on BTU &amp; Flow Meters — non-invasive retrofit</li>
-            <li class="sol-feature"><span class="sol-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>M-Bus Masters for centralized data collection</li>
+            <li class="sol-feature"><span class="sol-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>M-Bus Masters — centralised data collection, up to 250 meters</li>
             <li class="sol-feature"><span class="sol-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Smart Shut-off Valves — Wired M-Bus &amp; LoRaWAN wireless</li>
             <li class="sol-feature"><span class="sol-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Tenant Billing Software — automated, transparent &amp; scalable</li>
           </ul>
           <a href="#rfq" class="btn btn-forest">Get a Metering Quote</a>
         </div>
       </div>
-      <div class="sol-products-grid" style="margin-top:40px;">
-        <div class="sol-product-card">
-          <div class="sol-product-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-          <div class="sol-product-card-title">QN heat 5.5 US+</div>
-          <div class="sol-product-card-body">QUNDIS compact BTU meter with M-Bus communication and wireless radio option</div>
-        </div>
-        <div class="sol-product-card">
-          <div class="sol-product-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.5a9.5 9.5 0 1 0 9.5 9.5"/><circle cx="12" cy="12" r="3"/></svg></div>
-          <div class="sol-product-card-title">maddalena Water Meters</div>
-          <div class="sol-product-card-body">Class C precision water meters from Italy's premier metering manufacturer, since 1919</div>
-        </div>
-        <div class="sol-product-card">
-          <div class="sol-product-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-          <div class="sol-product-card-title">BC-RSV Smart Valve</div>
-          <div class="sol-product-card-body">Basiox-branded smart shut-off valve, IP67, Wired M-Bus &amp; LoRaWAN, 2.5MPa rated</div>
-        </div>
-        <div class="sol-product-card">
-          <div class="sol-product-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-          <div class="sol-product-card-title">M-Bus Master Units</div>
-          <div class="sol-product-card-body">Centralized data collection hub supporting up to 250 meters per master unit</div>
-        </div>
-        <div class="sol-product-card">
-          <div class="sol-product-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 6l7 7 4-4 8 8"/><path d="M15 21h6V9"/></svg></div>
-          <div class="sol-product-card-title">Clamp-on Flow Meters</div>
-          <div class="sol-product-card-body">Non-invasive BTU and flow metering — ideal for retrofit without pipe interruption</div>
-        </div>
-        <div class="sol-product-card">
-          <div class="sol-product-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M6 8h4M6 12h8"/></svg></div>
-          <div class="sol-product-card-title">Tenant Billing Software</div>
-          <div class="sol-product-card-body">Automated sub-metering &amp; billing platform — multi-unit residential &amp; commercial</div>
-        </div>
-      </div>
     </div>
 
-    <!-- Panel 2: Safety & IAQ -->
-    <div class="sol-panel" id="sol-safety" role="tabpanel">
-      <div class="sol-panel-inner">
-        <div class="sol-panel-visual" style="background: linear-gradient(135deg, #0D1B2A 0%, #1B3A4B 100%);">
-          <div class="sol-visual-icon" style="background: rgba(255,80,80,0.12); border-color: rgba(255,80,80,0.3);">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#FF6B6B" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          </div>
+    <div class="sol-drawer" id="drawer-safety" style="--accent:#FF6B6B">
+      <div class="sol-drawer-inner">
+        <div class="sol-drawer-visual" style="background:linear-gradient(135deg,#0D1B2A 0%,#1B3A4B 100%)">
+          <div class="sol-visual-icon" style="background:rgba(255,80,80,0.12);border-color:rgba(255,80,80,0.3)"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#FF6B6B" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
           <div class="sol-visual-title">Safety &amp; IAQ<br>Monitoring</div>
           <div class="sol-visual-sub">Real-time detection. Instant alerts. Zero compromise.</div>
-          <div class="sol-visual-number">02</div>
-          <div class="sol-visual-tags">
-            <span class="sol-tag">CO &amp; CO₂</span>
-            <span class="sol-tag">NO₂ &amp; O₃</span>
-            <span class="sol-tag">PM2.5 &amp; PM10</span>
-            <span class="sol-tag">Virus &amp; Mold</span>
-            <span class="sol-tag">SOS Alarm</span>
-          </div>
+          <div class="sol-visual-tags"><span>CO &amp; CO₂</span><span>NO₂ &amp; O₃</span><span>PM2.5</span><span>Virus &amp; Mold</span><span>SOS Alarm</span></div>
         </div>
-        <div class="sol-text">
+        <div class="sol-drawer-content">
           <div class="eyebrow">Solution 02</div>
-          <h3 class="section-title">Environmental Safety &amp; Air Quality</h3>
-          <p class="section-body">Our advanced gas detection and IAQ monitoring systems provide continuous, real-time environmental surveillance — protecting occupants, ensuring compliance, and integrating seamlessly with HVAC and BMS systems to automate responses before hazards escalate.</p>
+          <h3 class="sol-drawer-title">Environmental Safety &amp; Air Quality</h3>
+          <p class="sol-drawer-body">Our advanced gas detection and IAQ monitoring systems provide continuous, real-time environmental surveillance — protecting occupants, ensuring compliance, and integrating seamlessly with HVAC and BMS systems to automate responses before hazards escalate.</p>
           <ul class="sol-features">
             <li class="sol-feature"><span class="sol-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Multi-Gas Detectors — CO, CO₂, NO₂, O₂, O₃, T, RH, PM2.5, PM10, UV</li>
             <li class="sol-feature"><span class="sol-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Virus &amp; Mold Sensors — biological airborne contaminant detection</li>
@@ -637,62 +666,20 @@
           <a href="#rfq" class="btn btn-forest">Discuss Safety Requirements</a>
         </div>
       </div>
-      <div class="sol-products-grid" style="margin-top:40px;">
-        <div class="sol-product-card">
-          <div class="sol-product-card-icon" style="background: rgba(255,80,80,0.08); color: #E05555;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a5 5 0 1 0 0 10 5 5 0 0 0 0-10z" opacity="0.4"/><path d="M2 20c0-4 4.5-7 10-7s10 3 10 7"/></svg></div>
-          <div class="sol-product-card-title">Multi-Gas IAQ Detector</div>
-          <div class="sol-product-card-body">Single compact device monitoring CO, CO₂, NO₂, O₂, O₃, Temperature, RH, PM2.5, PM10 &amp; UV</div>
-        </div>
-        <div class="sol-product-card">
-          <div class="sol-product-card-icon" style="background: rgba(255,80,80,0.08); color: #E05555;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M6.3 6.3a8 8 0 1 0 11.4 0"/><path d="M12 2v4"/></svg></div>
-          <div class="sol-product-card-title">Virus &amp; Mold Sensor</div>
-          <div class="sol-product-card-body">Detects airborne viruses, bacteria and mold spores — triggers HVAC purification automatically</div>
-        </div>
-        <div class="sol-product-card">
-          <div class="sol-product-card-icon" style="background: rgba(255,80,80,0.08); color: #E05555;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
-          <div class="sol-product-card-title">Toxic Gas Detector</div>
-          <div class="sol-product-card-body">Powered by Viliso — high-precision sensing for harmful industrial and commercial gases</div>
-        </div>
-        <div class="sol-product-card">
-          <div class="sol-product-card-icon" style="background: rgba(255,80,80,0.08); color: #E05555;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 22 20 2 20"/><line x1="12" y1="9" x2="12" y2="13"/><circle cx="12" cy="17" r="0.5" fill="currentColor"/></svg></div>
-          <div class="sol-product-card-title">SOS &amp; Panic Alarm Sensor</div>
-          <div class="sol-product-card-body">Touch-activated or voice-activated (detects screams/distress) — hospitals, schools, care homes</div>
-        </div>
-        <div class="sol-product-card">
-          <div class="sol-product-card-icon" style="background: rgba(255,80,80,0.08); color: #E05555;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-          <div class="sol-product-card-title">BMS Integration Gateway</div>
-          <div class="sol-product-card-body">Seamless integration with existing Building Management Systems via Modbus, BACnet, MQTT</div>
-        </div>
-        <div class="sol-product-card">
-          <div class="sol-product-card-icon" style="background: rgba(255,80,80,0.08); color: #E05555;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-          <div class="sol-product-card-title">Monitoring Dashboard</div>
-          <div class="sol-product-card-body">Unified real-time air quality dashboard — multi-zone, multi-site cloud or on-premise</div>
-        </div>
-      </div>
     </div>
 
-    <!-- Panel 3: Air Purification -->
-    <div class="sol-panel" id="sol-air" role="tabpanel">
-      <div class="sol-panel-inner">
-        <div class="sol-panel-visual" style="background: linear-gradient(135deg, #0A2A3D 0%, #0D4A5E 100%);">
-          <div class="sol-visual-icon" style="background: rgba(72,202,228,0.12);">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#48CAE4" stroke-width="2"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
-          </div>
+    <div class="sol-drawer" id="drawer-air" style="--accent:#48CAE4">
+      <div class="sol-drawer-inner">
+        <div class="sol-drawer-visual" style="background:linear-gradient(135deg,#0A2A3D 0%,#0D4A5E 100%)">
+          <div class="sol-visual-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#48CAE4" stroke-width="2"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg></div>
           <div class="sol-visual-title">Intelligent Air<br>Purification</div>
           <div class="sol-visual-sub">Healthier environments through advanced filtration</div>
-          <div class="sol-visual-number">03</div>
-          <div class="sol-visual-tags">
-            <span class="sol-tag">Indoor</span>
-            <span class="sol-tag">Outdoor</span>
-            <span class="sol-tag">Formaldehyde</span>
-            <span class="sol-tag">PM2.5</span>
-            <span class="sol-tag">Allergens</span>
-          </div>
+          <div class="sol-visual-tags"><span>Indoor</span><span>Outdoor</span><span>Formaldehyde</span><span>PM2.5</span><span>Allergens</span></div>
         </div>
-        <div class="sol-text">
+        <div class="sol-drawer-content">
           <div class="eyebrow">Solution 03</div>
-          <h3 class="section-title">Clean Air. Healthy Spaces.</h3>
-          <p class="section-body">Basiox intelligent air purifiers use advanced multi-stage filtration to eliminate pollutants, allergens, formaldehyde, PM2.5 particulates and bad odours — creating healthier indoor and outdoor environments for residential, commercial and institutional applications.</p>
+          <h3 class="sol-drawer-title">Clean Air. Healthy Spaces.</h3>
+          <p class="sol-drawer-body">Basiox intelligent air purifiers use advanced multi-stage filtration to eliminate pollutants, allergens, formaldehyde, PM2.5 particulates and bad odours — creating healthier indoor and outdoor environments for residential, commercial and institutional applications.</p>
           <ul class="sol-features">
             <li class="sol-feature"><span class="sol-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Removes Formaldehyde, PM2.5, PM10 and biological contaminants</li>
             <li class="sol-feature"><span class="sol-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Indoor &amp; outdoor applications — residential and commercial</li>
@@ -705,32 +692,22 @@
       </div>
     </div>
 
-    <!-- Panel 4: Energy Solutions -->
-    <div class="sol-panel" id="sol-energy" role="tabpanel">
-      <div class="sol-panel-inner">
-        <div class="sol-panel-visual" style="background: linear-gradient(135deg, #0B2D0E 0%, #1A5E1F 100%);">
-          <div class="sol-visual-icon" style="background: rgba(144,238,144,0.12); border-color: rgba(144,238,144,0.3);">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#90EE90" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-          </div>
+    <div class="sol-drawer" id="drawer-energy" style="--accent:#90EE90">
+      <div class="sol-drawer-inner">
+        <div class="sol-drawer-visual" style="background:linear-gradient(135deg,#0B2D0E 0%,#1A5E1F 100%)">
+          <div class="sol-visual-icon" style="background:rgba(144,238,144,0.12);border-color:rgba(144,238,144,0.3)"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#90EE90" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
           <div class="sol-visual-title">Energy Saving<br>Solutions</div>
           <div class="sol-visual-sub">Up to 70% energy efficiency gains</div>
-          <div class="sol-visual-number">04</div>
-          <div class="sol-visual-tags">
-            <span class="sol-tag">Hybrid FAHUs</span>
-            <span class="sol-tag">Hydronic Cooling</span>
-            <span class="sol-tag">atomixAIR</span>
-            <span class="sol-tag">Energy Dashboard</span>
-          </div>
+          <div class="sol-visual-tags"><span>Hybrid FAHUs</span><span>Hydronic Cooling</span><span>atomixAIR</span></div>
         </div>
-        <div class="sol-text">
+        <div class="sol-drawer-content">
           <div class="eyebrow">Solution 04</div>
-          <h3 class="section-title">Optimise Energy. Reduce Costs.</h3>
-          <p class="section-body">From hybrid air handling units delivering 70% energy efficiency to real-time energy dashboards and advanced radiant cooling — Basiox's energy portfolio helps buildings and facilities dramatically reduce operational costs while meeting sustainability targets.</p>
+          <h3 class="sol-drawer-title">Optimise Energy. Reduce Costs.</h3>
+          <p class="sol-drawer-body">From hybrid air handling units delivering 70% energy efficiency to real-time energy dashboards and advanced radiant cooling — Basiox's energy portfolio helps buildings and facilities dramatically reduce operational costs while meeting sustainability targets.</p>
           <ul class="sol-features">
-            <li class="sol-feature"><span class="sol-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Vaayu Hybrid FAHUs — fresh air up to 70% energy efficiency (ISO/CE/RoHS)</li>
+            <li class="sol-feature"><span class="sol-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Vaayu Hybrid FAHUs — fresh air with up to 70% energy efficiency (ISO/CE/RoHS)</li>
             <li class="sol-feature"><span class="sol-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Radiant/Hydronic Cooling System — silent, draft-free, superior comfort</li>
             <li class="sol-feature"><span class="sol-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>atomixAIR Dynamic Diffusion — intelligent HVAC air distribution</li>
-            <li class="sol-feature"><span class="sol-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Energy Dashboarding — real-time multi-site consumption analytics</li>
             <li class="sol-feature"><span class="sol-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>FCU Thermostats &amp; CHW Valves for precise HVAC zone control</li>
             <li class="sol-feature"><span class="sol-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>BMS integration for automated demand response</li>
           </ul>
@@ -739,27 +716,18 @@
       </div>
     </div>
 
-    <!-- Panel 5: PLC & Automation -->
-    <div class="sol-panel" id="sol-automation" role="tabpanel">
-      <div class="sol-panel-inner">
-        <div class="sol-panel-visual" style="background: linear-gradient(135deg, #1A0A2E 0%, #3D1A6B 100%);">
-          <div class="sol-visual-icon" style="background: rgba(180,120,255,0.12); border-color: rgba(180,120,255,0.3);">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#B47AFF" stroke-width="2"><rect x="2" y="2" width="9" height="9" rx="1"/><rect x="13" y="2" width="9" height="9" rx="1"/><rect x="13" y="13" width="9" height="9" rx="1"/><rect x="2" y="13" width="9" height="9" rx="1"/></svg>
-          </div>
+    <div class="sol-drawer" id="drawer-automation" style="--accent:#B47AFF">
+      <div class="sol-drawer-inner">
+        <div class="sol-drawer-visual" style="background:linear-gradient(135deg,#1A0A2E 0%,#3D1A6B 100%)">
+          <div class="sol-visual-icon" style="background:rgba(180,120,255,0.12);border-color:rgba(180,120,255,0.3)"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#B47AFF" stroke-width="2"><rect x="2" y="2" width="9" height="9" rx="1"/><rect x="13" y="2" width="9" height="9" rx="1"/><rect x="13" y="13" width="9" height="9" rx="1"/><rect x="2" y="13" width="9" height="9" rx="1"/></svg></div>
           <div class="sol-visual-title">PLC &amp; Industrial<br>Automation</div>
           <div class="sol-visual-sub">Powered by Bardac Automation, USA</div>
-          <div class="sol-visual-number">05</div>
-          <div class="sol-visual-tags">
-            <span class="sol-tag">smarty PLC</span>
-            <span class="sol-tag">speedy</span>
-            <span class="sol-tag">savvyPanel</span>
-            <span class="sol-tag">AC/DC Drives</span>
-          </div>
+          <div class="sol-visual-tags"><span>smarty PLC</span><span>speedy</span><span>savvyPanel</span><span>AC/DC Drives</span></div>
         </div>
-        <div class="sol-text">
+        <div class="sol-drawer-content">
           <div class="eyebrow">Solution 05</div>
-          <h3 class="section-title">Industrial Automation &amp; Control</h3>
-          <p class="section-body">As exclusive regional representative for Bardac Automation (USA), Basiox delivers a complete industrial automation ecosystem — from programmable controllers and touch-panel HMIs to AC &amp; DC motor drives — enabling intelligent control for any process or facility application.</p>
+          <h3 class="sol-drawer-title">Industrial Automation &amp; Control</h3>
+          <p class="sol-drawer-body">As exclusive regional representative for Bardac Automation (USA), Basiox delivers a complete industrial automation ecosystem — from programmable controllers and touch-panel HMIs to AC &amp; DC motor drives — enabling intelligent control for any process or facility application.</p>
           <ul class="sol-features">
             <li class="sol-feature"><span class="sol-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>smarty PLC — programmable automation controllers, wide I/O range</li>
             <li class="sol-feature"><span class="sol-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>speedy — embeddable controllers interfacing drives &amp; soft starts</li>
@@ -773,158 +741,30 @@
       </div>
     </div>
 
-  </div>
-</section>
-
-
-<!-- ===================================================================
-     PRODUCT CATEGORIES OVERVIEW
-     =================================================================== -->
-<section id="products-overview" class="section" style="background: var(--white);">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="eyebrow">Complete Product Portfolio</div>
-      <h2 class="section-title">Every System. One Partner.</h2>
-      <p class="section-body">From individual sensors to complete building intelligence platforms — Basiox supplies, integrates and supports the full technology stack.</p>
+    <div class="sol-drawer" id="drawer-dashboard" style="--accent:#F59E0B">
+      <div class="sol-drawer-inner">
+        <div class="sol-drawer-visual" style="background:linear-gradient(135deg,#1A1200 0%,#4A3500 100%)">
+          <div class="sol-visual-icon" style="background:rgba(245,158,11,0.12);border-color:rgba(245,158,11,0.3)"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h2v5H7zM11 6h2v7h-2zM15 10h2v3h-2z"/></svg></div>
+          <div class="sol-visual-title">Energy<br>Dashboarding</div>
+          <div class="sol-visual-sub">Real-time intelligence across every system</div>
+          <div class="sol-visual-tags"><span>Real-Time</span><span>Multi-Site</span><span>Analytics</span></div>
+        </div>
+        <div class="sol-drawer-content">
+          <div class="eyebrow">Solution 06</div>
+          <h3 class="sol-drawer-title">Monitor. Analyse. Optimise.</h3>
+          <p class="sol-drawer-body">Real-time energy monitoring and analytics platform — track, analyse and optimise energy consumption across multiple systems and sites. Identify waste, implement savings strategies and report with data-driven confidence.</p>
+          <ul class="sol-features">
+            <li class="sol-feature"><span class="sol-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Live dashboards — consumption, demand, cost and carbon tracking</li>
+            <li class="sol-feature"><span class="sol-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Multi-site consolidation — one view across all buildings</li>
+            <li class="sol-feature"><span class="sol-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Anomaly detection and automated savings alerts</li>
+            <li class="sol-feature"><span class="sol-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Integrates with Basiox meters, BMS and third-party systems</li>
+            <li class="sol-feature"><span class="sol-feature-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Cloud or on-premise deployment</li>
+          </ul>
+          <a href="#rfq" class="btn btn-forest">Request a Demo</a>
+        </div>
+      </div>
     </div>
 
-    <div class="products-grid">
-
-      <div class="product-cat-card featured reveal">
-        <div class="product-cat-header">
-          <div class="product-cat-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/><path d="M2 12h2M20 12h2"/></svg>
-          </div>
-          <div class="product-cat-title">Smart Metering &amp; Sub-Billing</div>
-          <div class="product-cat-number">01</div>
-        </div>
-        <div class="product-cat-body">
-          <p class="product-cat-desc">The most comprehensive sub-metering solution on the market. BTU heat meters, precision water meters, clamp-on flow meters, M-Bus data masters, smart LoRaWAN shut-off valves and automated tenant billing software — all from QUNDIS (Germany) and maddalena (Italy).</p>
-          <div class="product-cat-tags">
-            <span class="product-tag">BTU Meters</span>
-            <span class="product-tag">Water Meters</span>
-            <span class="product-tag">M-Bus Masters</span>
-            <span class="product-tag">Smart Valves</span>
-            <span class="product-tag">LoRaWAN</span>
-            <span class="product-tag">Billing Software</span>
-          </div>
-          <a href="#rfq" class="product-cat-link">
-            Request Specification
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <div class="product-cat-card reveal reveal-delay-1">
-        <div class="product-cat-header" style="background: linear-gradient(135deg, #0D1B2A 0%, #1B3A4B 100%);">
-          <div class="product-cat-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          </div>
-          <div class="product-cat-title">Gas &amp; Toxic Detectors</div>
-          <div class="product-cat-number">02</div>
-        </div>
-        <div class="product-cat-body">
-          <p class="product-cat-desc">Multi-parameter gas sensors monitoring CO, CO₂, NO₂, O₂, Ozone, PM2.5, PM10, temperature, humidity and UV — in a single compact device. BMS-ready with Modbus/BACnet outputs.</p>
-          <div class="product-cat-tags">
-            <span class="product-tag">CO &amp; CO₂</span>
-            <span class="product-tag">PM2.5 &amp; PM10</span>
-            <span class="product-tag">BMS Ready</span>
-          </div>
-          <a href="#rfq" class="product-cat-link">
-            Request Specification
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <div class="product-cat-card reveal reveal-delay-2">
-        <div class="product-cat-header" style="background: linear-gradient(135deg, #0A2A3D 0%, #0D4A5E 100%);">
-          <div class="product-cat-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
-          </div>
-          <div class="product-cat-title">Intelligent Air Purifiers</div>
-          <div class="product-cat-number">03</div>
-        </div>
-        <div class="product-cat-body">
-          <p class="product-cat-desc">Advanced multi-stage filtration purifiers for indoor and outdoor settings. Removes formaldehyde, allergens, PM2.5, bacteria and odours. Smart IAQ-triggered operation.</p>
-          <div class="product-cat-tags">
-            <span class="product-tag">Indoor</span>
-            <span class="product-tag">Outdoor</span>
-            <span class="product-tag">Formaldehyde</span>
-          </div>
-          <a href="#rfq" class="product-cat-link">
-            Request Specification
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <div class="product-cat-card reveal">
-        <div class="product-cat-header" style="background: linear-gradient(135deg, #0B2D0E 0%, #1A5E1F 100%);">
-          <div class="product-cat-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-          </div>
-          <div class="product-cat-title">Hybrid FAHUs &amp; Cooling</div>
-          <div class="product-cat-number">04</div>
-        </div>
-        <div class="product-cat-body">
-          <p class="product-cat-desc">Vaayu Hybrid Fresh Air Handling Units deliver up to 70% energy savings. Radiant/Hydronic Cooling Systems provide silent, efficient comfort. atomixAIR Dynamic Diffusion optimises HVAC performance.</p>
-          <div class="product-cat-tags">
-            <span class="product-tag">70% Energy Saving</span>
-            <span class="product-tag">Net Zero</span>
-          </div>
-          <a href="#rfq" class="product-cat-link">
-            Request Specification
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <div class="product-cat-card reveal reveal-delay-1">
-        <div class="product-cat-header" style="background: linear-gradient(135deg, #1A0A2E 0%, #3D1A6B 100%);">
-          <div class="product-cat-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="9" height="9" rx="1"/><rect x="13" y="2" width="9" height="9" rx="1"/><rect x="13" y="13" width="9" height="9" rx="1"/><rect x="2" y="13" width="9" height="9" rx="1"/></svg>
-          </div>
-          <div class="product-cat-title">PLC, Drives &amp; HMI</div>
-          <div class="product-cat-number">05</div>
-        </div>
-        <div class="product-cat-body">
-          <p class="product-cat-desc">smarty &amp; speedy PLCs, savvyPanel HMI touch screens (5"–9.7"), AC drives to 400HP and DC drives to 2000+ HP — the complete Bardac Automation (USA) industrial control portfolio.</p>
-          <div class="product-cat-tags">
-            <span class="product-tag">PLC</span>
-            <span class="product-tag">AC/DC Drives</span>
-            <span class="product-tag">HMI Panels</span>
-          </div>
-          <a href="#rfq" class="product-cat-link">
-            Request Specification
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <div class="product-cat-card reveal reveal-delay-2">
-        <div class="product-cat-header" style="background: linear-gradient(135deg, #1A1200 0%, #4A3500 100%);">
-          <div class="product-cat-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h2v5H7zM11 6h2v7h-2zM15 10h2v3h-2z"/></svg>
-          </div>
-          <div class="product-cat-title">Energy Dashboarding</div>
-          <div class="product-cat-number">06</div>
-        </div>
-        <div class="product-cat-body">
-          <p class="product-cat-desc">Real-time energy monitoring and analytics platform. Track, analyse and optimise energy consumption across multiple systems and sites. Identify waste. Implement savings strategies with data-driven confidence.</p>
-          <div class="product-cat-tags">
-            <span class="product-tag">Real-Time</span>
-            <span class="product-tag">Multi-Site</span>
-            <span class="product-tag">Analytics</span>
-          </div>
-          <a href="#rfq" class="product-cat-link">
-            Request Demo
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-        </div>
-      </div>
-
-    </div>
   </div>
 </section>
 
@@ -1751,7 +1591,7 @@
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="js/main.js?v=20250714c"></script>
 
 <!-- Floating WhatsApp Button -->
 <a href="https://wa.me/971585991377" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
