@@ -1141,6 +1141,39 @@ input, textarea, select { font-family: inherit; }
   padding: 20px 22px 22px;
 }
 
+/* Product-photo card head */
+.sol-card-head--product {
+  min-height: 160px;
+  overflow: hidden;
+  padding: 16px 18px;
+  align-items: flex-start;
+}
+
+.sol-product-glow {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 80px;
+  background: radial-gradient(ellipse at center, rgba(0,190,220,0.35) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sol-product-img {
+  position: absolute;
+  bottom: -8px;
+  right: -12px;
+  width: 72%;
+  max-width: 220px;
+  object-fit: contain;
+  z-index: 2;
+  filter: drop-shadow(0 8px 24px rgba(0,190,220,0.30)) drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+  transform: rotate(-4deg) scale(1.06);
+  transform-origin: bottom right;
+}
+
 .sol-card-title {
   font-family: var(--font-display);
   font-size: 17px;
