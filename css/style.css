@@ -2869,92 +2869,168 @@ footer {
 }
 
 /* ==========================================================================
-   CLIENT LOGO WALL
+   CLIENT SECTOR BENTO
    ========================================================================== */
 .client-wall-section {
-  background: var(--off-white, #f8f9fa);
-  padding: var(--section-py) 0;
-  border-top: 1px solid var(--border);
+  background: #00112B;
+  padding: 90px 0 80px;
 }
 
 .client-wall-header {
   text-align: center;
-  max-width: 560px;
+  max-width: 600px;
   margin: 0 auto 56px;
 }
 
-.client-logos-grid {
+.client-wall-header .section-title { color: #ffffff; }
+.client-wall-header .section-body  { color: rgba(255,255,255,0.50); }
+.client-wall-header .eyebrow       { color: var(--sky); }
+
+/* Bento grid */
+.sector-bento {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 16px;
-  margin-bottom: 28px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 260px 260px;
+  gap: 14px;
+  margin-bottom: 32px;
 }
 
-.client-logo-card {
+/* Base sector card */
+.sector-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  cursor: default;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.sector-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+  z-index: 2;
+}
+
+/* Wide card spans 2 columns */
+.sector-card--wide { grid-column: span 2; }
+
+/* Tall card spans 2 rows */
+.sector-card--tall { grid-row: span 2; }
+
+/* Dark gradient overlay */
+.sector-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,5,20,0.92) 0%,
+    rgba(0,10,30,0.65) 45%,
+    rgba(0,10,30,0.30) 100%
+  );
+  transition: background 0.35s ease;
+}
+
+.sector-card:hover .sector-card-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(0,5,20,0.88) 0%,
+    rgba(0,17,43,0.55) 45%,
+    rgba(0,17,43,0.20) 100%
+  );
+}
+
+/* Content anchored to bottom */
+.sector-card-content {
+  position: absolute;
+  inset: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 28px 16px;
-  background: var(--white);
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius-lg);
-  gap: 10px;
-  transition: transform 0.2s var(--ease), box-shadow 0.2s, border-color 0.2s;
-}
-.client-logo-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--sky);
+  justify-content: flex-end;
+  padding: 28px;
+  z-index: 1;
 }
 
-.client-logo-mark {
-  width: 56px;
-  height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 4px;
-  opacity: 0.85;
-  transition: opacity 0.2s;
-}
-.client-logo-card:hover .client-logo-mark { opacity: 1; }
-
-.client-logo-sector {
-  font-family: var(--font-display);
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--text-primary);
-  line-height: 1.3;
+/* Large white icon at top-left */
+.sector-card-icon {
+  position: absolute;
+  top: 24px; left: 24px;
+  width: 52px; height: 52px;
+  background: rgba(255,255,255,0.12);
+  border: 1.5px solid rgba(255,255,255,0.3);
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  backdrop-filter: blur(4px);
+  transition: background 0.3s;
 }
 
-.client-logo-region {
+.sector-card:hover .sector-card-icon { background: rgba(0,190,220,0.25); border-color: rgba(0,190,220,0.5); }
+
+.sector-card-icon svg { width: 26px; height: 26px; }
+
+/* Region badge */
+.sector-card-region {
   font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
+  font-weight: 800;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--sky);
+  margin-bottom: 8px;
 }
 
-.client-logo-solution {
+/* Title */
+.sector-card-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.4px;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.sector-card--wide .sector-card-title { font-size: 24px; }
+.sector-card--tall .sector-card-title { font-size: 22px; }
+
+/* Solution tags */
+.sector-card-tags {
+  display: flex; flex-wrap: wrap; gap: 6px;
+}
+
+.sector-card-tags span {
   font-size: 10px;
-  color: var(--sky);
-  font-weight: 600;
-  line-height: 1.4;
+  font-weight: 700;
+  color: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(4px);
+  padding: 3px 10px;
+  border-radius: 100px;
+  letter-spacing: 0.3px;
 }
 
 .client-wall-note {
   text-align: center;
   font-size: 12px;
-  color: var(--text-muted);
+  color: rgba(255,255,255,0.30);
   font-style: italic;
+  margin-top: 8px;
 }
 
-@media (max-width: 900px) {
-  .client-logos-grid { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 860px) {
+  .sector-bento {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  .sector-card--wide { grid-column: span 2; }
+  .sector-card--tall { grid-row: span 1; }
+  .sector-card { min-height: 220px; }
 }
-@media (max-width: 560px) {
-  .client-logos-grid { grid-template-columns: 1fr 1fr; }
+
+@media (max-width: 520px) {
+  .sector-bento { grid-template-columns: 1fr; }
+  .sector-card--wide { grid-column: span 1; }
+  .sector-card { min-height: 200px; }
 }
 
 /* ==========================================================================
