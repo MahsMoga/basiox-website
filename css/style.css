@@ -1149,28 +1149,16 @@ input, textarea, select { font-family: inherit; }
   align-items: flex-start;
 }
 
-.sol-product-glow {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 200px;
-  height: 80px;
-  background: radial-gradient(ellipse at center, rgba(0,190,220,0.28) 0%, transparent 70%);
-  pointer-events: none;
-  z-index: 1;
-}
+.sol-product-glow { display: none; }
 
 .sol-product-img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center center;
-  padding: 10px 12px 8px;
-  z-index: 2;
-  filter: drop-shadow(0 6px 20px rgba(0,190,220,0.28)) drop-shadow(0 2px 8px rgba(0,0,0,0.55));
+  z-index: 1;
 }
 
 .sol-card-head--product .sol-card-num {
@@ -1178,7 +1166,7 @@ input, textarea, select { font-family: inherit; }
   bottom: 8px;
   right: 14px;
   z-index: 3;
-  color: rgba(255,255,255,0.18);
+  color: rgba(0,17,43,0.12);
 }
 
 .sol-card-title {
