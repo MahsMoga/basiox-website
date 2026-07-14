@@ -2710,28 +2710,30 @@ footer {
    CERTIFICATIONS
    ========================================================================== */
 .cert-section {
-  background: #00112B !important;
+  background: linear-gradient(160deg, #EEF4F8 0%, #E4EFF5 100%);
   padding: 70px 0 80px;
   position: relative;
   overflow: hidden;
 }
 
-/* Subtle dot grid overlay */
+/* Very faint grid lines */
 .cert-section::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle, rgba(0,190,220,0.10) 1px, transparent 1px);
-  background-size: 40px 40px;
+  background-image:
+    linear-gradient(rgba(0,100,150,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,100,150,0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
   pointer-events: none;
 }
 
-/* Teal accent bar at very top */
+/* Top accent gradient bar */
 .cert-top-bar {
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, transparent 0%, var(--sky) 30%, #00FFCC 60%, transparent 100%);
+  height: 4px;
+  background: linear-gradient(90deg, #003087 0%, #00BEDC 35%, #00E5A0 65%, #003087 100%);
 }
 
 /* Section header */
@@ -2746,14 +2748,14 @@ footer {
   font-family: var(--font-display);
   font-size: clamp(22px, 3vw, 36px);
   font-weight: 900;
-  color: #ffffff;
+  color: #00112B;
   letter-spacing: -1px;
   margin: 12px 0 14px;
 }
 
 .cert-sub {
   font-size: 14px;
-  color: rgba(255,255,255,0.45);
+  color: rgba(0,17,43,0.50);
   max-width: 500px;
   margin: 0 auto;
   line-height: 1.7;
@@ -2765,35 +2767,46 @@ footer {
   align-items: stretch;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 14px;
   position: relative;
   z-index: 1;
 }
 
-/* Each badge as a dark hover card */
+/* White credential cards */
 .cert-badge {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  padding: 24px 20px 20px;
-  min-width: 110px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 16px;
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  padding: 28px 20px 20px;
+  min-width: 118px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,50,100,0.08), 0 1px 3px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Coloured top strip per card — using border-top colour from the mark */
+.cert-badge::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: currentColor;
+  opacity: 0.9;
 }
 
 .cert-badge:hover {
-  transform: translateY(-6px);
-  border-color: rgba(0,190,220,0.35);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(0,190,220,0.15);
+  transform: translateY(-7px);
+  box-shadow: 0 16px 48px rgba(0,50,100,0.14), 0 4px 12px rgba(0,0,0,0.08);
 }
 
 .cert-badge-mark {
-  width: 58px;
-  height: 58px;
+  width: 60px;
+  height: 60px;
   border-radius: 14px;
   border: 2px solid;
   display: flex;
@@ -2803,26 +2816,25 @@ footer {
   font-size: 14px;
   font-weight: 900;
   letter-spacing: -0.5px;
-  background: rgba(255,255,255,0.04);
-  transition: box-shadow 0.25s ease;
+  background: transparent;
+  transition: transform 0.25s ease;
 }
 
 .cert-badge:hover .cert-badge-mark {
-  box-shadow: 0 0 16px currentColor;
-  opacity: 1;
+  transform: scale(1.08);
 }
 
 .cert-badge-name {
   font-size: 12px;
   font-weight: 700;
-  color: var(--white);
+  color: #00112B;
   text-align: center;
   line-height: 1.3;
 }
 
 .cert-badge-desc {
   font-size: 10px;
-  color: rgba(255,255,255,0.38);
+  color: rgba(0,17,43,0.45);
   text-align: center;
   letter-spacing: 0.3px;
 }
@@ -2831,7 +2843,7 @@ footer {
 .cert-divider { display: none; }
 
 @media (max-width: 768px) {
-  .cert-badge { min-width: 90px; padding: 18px 14px 16px; }
+  .cert-badge { min-width: 95px; padding: 22px 14px 16px; }
   .cert-title { font-size: 22px; }
 }
 
