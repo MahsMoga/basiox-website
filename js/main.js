@@ -72,24 +72,26 @@ document.addEventListener('DOMContentLoaded', () => {
     requestAnimationFrame(update);
   }
 
-  // --- Solution card → drawer toggle ---
+  // --- Solution card → row-drawer toggle ---
   document.querySelectorAll('.sol-card').forEach(card => {
     card.addEventListener('click', () => {
       const key = card.dataset.sol;
       const drawer = document.getElementById('drawer-' + key);
       if (!drawer) return;
 
+      const rowDrawer = drawer.closest('.sol-row-drawer');
       const isOpen = card.classList.contains('active');
 
       // Close all
       document.querySelectorAll('.sol-card').forEach(c => c.classList.remove('active'));
+      document.querySelectorAll('.sol-row-drawer').forEach(rd => rd.classList.remove('open'));
       document.querySelectorAll('.sol-drawer').forEach(d => d.classList.remove('open'));
 
       if (!isOpen) {
         card.classList.add('active');
+        rowDrawer.classList.add('open');
         drawer.classList.add('open');
-        // Smooth scroll so drawer is visible
-        setTimeout(() => drawer.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 50);
+        setTimeout(() => rowDrawer.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 50);
       }
     });
   });

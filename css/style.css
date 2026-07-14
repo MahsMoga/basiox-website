@@ -1193,6 +1193,15 @@ input, textarea, select { font-family: inherit; }
   transform: rotate(180deg);
 }
 
+/* Row drawer — spans full grid width, sits after each row of cards */
+.sol-row-drawer {
+  display: none;
+  grid-column: 1 / -1;
+}
+.sol-row-drawer.open { display: block; }
+.sol-row-drawer .sol-drawer { display: none; }
+.sol-row-drawer .sol-drawer.open { display: block; }
+
 /* Detail drawer */
 .sol-drawer {
   display: none;
