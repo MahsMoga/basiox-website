@@ -1,5 +1,5 @@
-/* ==========================================================================
-   BASIOX CONTROLS — Design System & Global Styles
+﻿/* ==========================================================================
+   BASIOX CONTROLS â€” Design System & Global Styles
    ========================================================================== */
 
 /* --- Fonts --- */
@@ -7,7 +7,7 @@
 
 /* --- CSS Custom Properties --- */
 :root {
-  /* Brand Colors — Siemens Teal Edition */
+  /* Brand Colors â€” Siemens Teal Edition */
   --forest:      #00112B;   /* Primary dark navy */
   --forest-mid:  #002B5C;   /* Mid navy */
   --forest-light:#004B8C;   /* Light navy */
@@ -1068,7 +1068,7 @@ input, textarea, select { font-family: inherit; }
 }
 
 /* ==========================================================================
-   SOLUTIONS — unified grid + drawer
+   SOLUTIONS â€” unified grid + drawer
    ========================================================================== */
 .sol-unified {
   background: var(--off-white);
@@ -1143,9 +1143,9 @@ input, textarea, select { font-family: inherit; }
 
 /* Product-photo card head */
 .sol-card-head--product {
-  min-height: 160px;
+  min-height: 220px;
   overflow: hidden;
-  padding: 16px 18px;
+  padding: 0;
   align-items: flex-start;
 }
 
@@ -1157,7 +1157,7 @@ input, textarea, select { font-family: inherit; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center;
+  object-position: center 15%;
   z-index: 1;
 }
 
@@ -1221,7 +1221,7 @@ input, textarea, select { font-family: inherit; }
   transform: rotate(180deg);
 }
 
-/* Row drawer — spans full grid width, sits after each row of cards */
+/* Row drawer â€” spans full grid width, sits after each row of cards */
 .sol-row-drawer {
   display: none;
   grid-column: 1 / -1;
@@ -1557,7 +1557,7 @@ input, textarea, select { font-family: inherit; }
 }
 
 /* ==========================================================================
-   TIMELINE SECTION — card grid redesign
+   TIMELINE SECTION â€” card grid redesign
    ========================================================================== */
 .tl-section {
   background: var(--bg-dark);
@@ -1725,7 +1725,7 @@ input, textarea, select { font-family: inherit; }
 }
 
 /* ==========================================================================
-   STATS — full-bleed photo, floating numbers, no boxes
+   STATS â€” full-bleed photo, floating numbers, no boxes
    ========================================================================== */
 .stats-hero-section {
   position: relative;
@@ -1823,7 +1823,7 @@ input, textarea, select { font-family: inherit; }
 .stat-item, .stat-number, .stat-label { display: none; }
 
 /* ==========================================================================
-   ROADMAP — Bento Mission Tiles
+   ROADMAP â€” Bento Mission Tiles
    ========================================================================== */
 .rm-section {
   position: relative;
@@ -1870,7 +1870,7 @@ input, textarea, select { font-family: inherit; }
   gap: 16px;
 }
 
-/* Tile layout: 1+2 on left 2×2, tile 3 spans right column both rows, 4+5 on bottom left */
+/* Tile layout: 1+2 on left 2Ã—2, tile 3 spans right column both rows, 4+5 on bottom left */
 .rm-tile--1 { grid-column: 1; grid-row: 1; }
 .rm-tile--2 { grid-column: 2; grid-row: 1; }
 .rm-tile--3 { grid-column: 3; grid-row: 1 / 3; }
@@ -1955,7 +1955,7 @@ input, textarea, select { font-family: inherit; }
   text-transform: uppercase;
 }
 
-/* Pictorial SVG illustration — no box, raw artwork */
+/* Pictorial SVG illustration â€” no box, raw artwork */
 .rm-tile-visual {
   margin-bottom: 18px;
 }
@@ -2728,20 +2728,20 @@ footer {
 }
 
 /* Individual bold gradients */
-.cert-badge:nth-child(1)  { background: linear-gradient(145deg, #1e40af, #1e3a8a); }  /* CE — navy blue */
-.cert-badge:nth-child(3)  { background: linear-gradient(145deg, #dc2626, #991b1b); }  /* RoHS — deep red */
-.cert-badge:nth-child(5)  { background: linear-gradient(145deg, #059669, #065f46); }  /* ISO — forest green */
-.cert-badge:nth-child(7)  { background: linear-gradient(145deg, #d97706, #92400e); }  /* MID — rich amber */
-.cert-badge:nth-child(9)  { background: linear-gradient(145deg, #7c3aed, #4c1d95); }  /* BACnet — deep purple */
-.cert-badge:nth-child(11) { background: linear-gradient(145deg, #0891b2, #164e63); }  /* Modbus — ocean teal */
-.cert-badge:nth-child(13) { background: linear-gradient(145deg, #0284c7, #1e3a8a); }  /* LoRaWAN — sky→navy */
+.cert-badge:nth-child(1)  { background: linear-gradient(145deg, #1e40af, #1e3a8a); }  /* CE â€” navy blue */
+.cert-badge:nth-child(3)  { background: linear-gradient(145deg, #dc2626, #991b1b); }  /* RoHS â€” deep red */
+.cert-badge:nth-child(5)  { background: linear-gradient(145deg, #059669, #065f46); }  /* ISO â€” forest green */
+.cert-badge:nth-child(7)  { background: linear-gradient(145deg, #d97706, #92400e); }  /* MID â€” rich amber */
+.cert-badge:nth-child(9)  { background: linear-gradient(145deg, #7c3aed, #4c1d95); }  /* BACnet â€” deep purple */
+.cert-badge:nth-child(11) { background: linear-gradient(145deg, #0891b2, #164e63); }  /* Modbus â€” ocean teal */
+.cert-badge:nth-child(13) { background: linear-gradient(145deg, #0284c7, #1e3a8a); }  /* LoRaWAN â€” skyâ†’navy */
 
 .cert-badge:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 24px 56px rgba(0,0,0,0.28), 0 6px 16px rgba(0,0,0,0.16);
 }
 
-/* Badge mark — white on coloured bg */
+/* Badge mark â€” white on coloured bg */
 .cert-badge-mark {
   width: 64px;
   height: 64px;
@@ -2846,7 +2846,7 @@ footer {
 
 .sector-strip:hover .sector-strip-bg { transform: scale(1.04); }
 
-/* Dark overlay — heavier on sides to show text on collapsed strips */
+/* Dark overlay â€” heavier on sides to show text on collapsed strips */
 .sector-strip::after {
   content: '';
   position: absolute;
@@ -2869,7 +2869,7 @@ footer {
   );
 }
 
-/* Vertical number label — visible when collapsed */
+/* Vertical number label â€” visible when collapsed */
 .sector-strip-num {
   position: absolute;
   top: 24px;
@@ -2886,7 +2886,7 @@ footer {
 
 .sector-strip:hover .sector-strip-num { opacity: 0; }
 
-/* Vertical text label — visible when collapsed */
+/* Vertical text label â€” visible when collapsed */
 .sector-strip-label {
   position: absolute;
   bottom: 50%;
@@ -2906,7 +2906,7 @@ footer {
 
 .sector-strip:hover .sector-strip-label { opacity: 0; }
 
-/* Detail content — fades in when expanded */
+/* Detail content â€” fades in when expanded */
 .sector-strip-detail {
   position: absolute;
   bottom: 0; left: 0; right: 0;

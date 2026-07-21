@@ -1,5 +1,5 @@
-/* ==========================================================================
-   BASIOX CONTROLS — Main JavaScript
+﻿/* ==========================================================================
+   BASIOX CONTROLS â€” Main JavaScript
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     requestAnimationFrame(update);
   }
 
-  // --- Solution card → row-drawer toggle ---
+  // --- Solution card â†’ row-drawer toggle ---
   document.querySelectorAll('.sol-card').forEach(card => {
     card.addEventListener('click', () => {
       const key = card.dataset.sol;
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- RFQ Form — client-side validation only, FormSubmit.co handles delivery ---
+  // --- RFQ Form â€” client-side validation only, FormSubmit.co handles delivery ---
   const form = document.getElementById('rfq-form');
   form?.addEventListener('submit', (e) => {
     const required = form.querySelectorAll('[required]');
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
     const btn = form.querySelector('.form-submit');
-    btn.textContent = 'Sending…';
+    btn.textContent = 'Sendingâ€¦';
     btn.disabled = true;
   });
 
@@ -134,4 +134,4 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.3 });
   sections.forEach(s => sectionObserver.observe(s));
 
-});
+});
