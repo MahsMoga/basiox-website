@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metering Products | Basiox Controls</title>
+  <meta name="description" content="Explore Basiox's full range of metering products — BTU meters, water meters, M-Bus gateways and smart shutoff valves.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%230B3D2E'/%3E%3Cpath d='M10 22 L16 10 L22 22 M13 18 L19 18' stroke='%2348CAE4' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --forest:      #00112B;
+      --forest-mid:  #002B5C;
+      --sky:         #00BEDC;
+      --sky-light:   #66D9EE;
+      --sky-pale:    #E0F7FC;
+      --teal:        #009999;
+      --white:       #FFFFFF;
+      --bg-page:     #F4F8FB;
+      --bg-dark:     #000B1A;
+      --border:      rgba(0,17,43,0.10);
+      --text-primary:#0A1628;
+      --text-secondary:#1F3766;
+      --text-muted:  #5A7A99;
+      --shadow-sm:   0 1px 3px rgba(0,17,43,0.08);
+      --shadow-md:   0 4px 16px rgba(0,17,43,0.10);
+      --shadow-lg:   0 10px 40px rgba(0,17,43,0.14);
+      --font-display:'Outfit', system-ui, sans-serif;
+      --font-body:   'Inter', system-ui, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font-body); background: var(--bg-page); color: var(--text-primary); }
+
+    /* NAV */
+    .topbar {
+      background: var(--forest);
+      padding: 0 24px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+    .topbar-logo img { height: 36px; }
+    .topbar-back {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.7);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .topbar-back:hover { color: var(--sky); }
+    .topbar-cta {
+      background: var(--sky);
+      color: var(--forest);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 13px;
+      padding: 9px 20px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .topbar-cta:hover { opacity: 0.85; }
+
+    /* HERO */
+    .page-hero {
+      background: linear-gradient(135deg, var(--forest) 0%, #002B5C 60%, #007993 100%);
+      padding: 64px 24px 56px;
+      text-align: center;
+    }
+    .page-hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--sky);
+      margin-bottom: 20px;
+    }
+    .page-hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--sky);
+    }
+    .page-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .page-hero h1 span { color: var(--sky); }
+    .page-hero p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.65);
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* TAB NAV */
+    .tab-nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 64px;
+      z-index: 90;
+    }
+    .tab-nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .tab-nav-inner::-webkit-scrollbar { display: none; }
+    .tab-btn {
+      flex-shrink: 0;
+      padding: 16px 24px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+      white-space: nowrap;
+    }
+    .tab-btn:hover { color: var(--text-primary); }
+    .tab-btn.active { color: var(--sky); border-bottom-color: var(--sky); }
+
+    /* CONTENT */
+    .content { max-width: 1200px; margin: 0 auto; padding: 48px 24px 80px; }
+
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* PRODUCT SECTION HEADER */
+    .prod-section-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 36px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .prod-section-eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--sky);
+      margin-bottom: 8px;
+    }
+    .prod-section-head h2 {
+      font-family: var(--font-display);
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 800;
+      color: var(--text-primary);
+      line-height: 1.2;
+    }
+    .prod-section-head p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-top: 8px;
+      max-width: 520px;
+    }
+    .prod-enquire-btn {
+      flex-shrink: 0;
+      background: var(--forest);
+      color: var(--white);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 14px;
+      padding: 12px 24px;
+      border-radius: 100px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .prod-enquire-btn:hover { background: var(--sky); color: var(--forest); }
+
+    /* PRODUCT CARDS GRID */
+    .prod-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .prod-card {
+      background: var(--white);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+    .prod-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+
+    .prod-card-accent { height: 4px; }
+
+    .prod-card-body { padding: 22px 22px 16px; flex: 1; }
+    .prod-card-brand {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+    .prod-card-name {
+      font-family: var(--font-display);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+    .prod-card-model {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--sky);
+      margin-bottom: 12px;
+    }
+    .prod-card-desc {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .prod-card-specs {
+      padding: 16px 22px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      border-top: 1px solid var(--border);
+    }
+    .spec-item { background: var(--bg-page); border-radius: 8px; padding: 8px 10px; }
+    .spec-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 2px; }
+    .spec-value { font-size: 12px; font-weight: 600; color: var(--text-primary); }
+
+    .prod-card-tags {
+      padding: 0 22px 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .prod-card-tags span {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 100px;
+      background: var(--sky-pale);
+      color: var(--teal);
+    }
+
+    .prod-card-footer {
+      padding: 0 22px 20px;
+    }
+    .prod-card-cta {
+      display: block;
+      text-align: center;
+      background: var(--forest);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 10px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .prod-card-cta:hover { background: var(--sky); color: var(--forest); }
+
+    /* FOOTER */
+    .page-footer {
+      background: var(--forest);
+      text-align: center;
+      padding: 24px;
+      color: rgba(255,255,255,0.4);
+      font-size: 13px;
+    }
+    .page-footer a { color: var(--sky); text-decoration: none; }
+
+    @media (max-width: 640px) {
+      .prod-section-head { flex-direction: column; }
+      .prod-grid { grid-template-columns: 1fr; }
+      .prod-card-specs { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="topbar">
+  <a href="../index.html" class="topbar-back">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+    Back to main site
+  </a>
+  <a href="../index.html" class="topbar-logo">
+    <img src="../images/logo-white-hires.png" alt="Basiox Controls">
+  </a>
+  <a href="../index.html#rfq" class="topbar-cta">Request a Quote</a>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-hero-eyebrow">Metering Products</div>
+  <h1>Precision Meters for<br><span>Every Application</span></h1>
+  <p>From BTU heat meters to ultrasonic water meters — MID-certified, field-proven hardware trusted across district cooling, commercial buildings and utilities.</p>
+</div>
+
+<!-- TAB NAV -->
+<div class="tab-nav">
+  <div class="tab-nav-inner">
+    <button class="tab-btn active" data-tab="btu">BTU Meters</button>
+    <button class="tab-btn" data-tab="water">Water Meters</button>
+    <button class="tab-btn" data-tab="valves">Shutoff Valves</button>
+    <button class="tab-btn" data-tab="gateways">M-Bus Gateways</button>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+  <!-- BTU METERS -->
+  <div class="tab-panel active" data-panel="btu">
+    <div class="prod-section-head">
+      <div>
+        <div class="prod-section-eyebrow">BTU / Heat Meters</div>
+        <h2>Thermal Energy Measurement</h2>
+        <p>Static ultrasonic BTU and heat meters for district cooling, central heating and commercial energy sub-metering. MID-certified, no moving parts.</p>
+      </div>
+      <a href="../index.html#rfq" class="prod-enquire-btn">Enquire Now →</a>
+    </div>
+    <div class="prod-grid">
+
+      <div class="prod-card">
+        <div class="prod-card-accent" style="background:linear-gradient(90deg,#0067A5,#00BEDC)"></div>
+        <div class="prod-card-body">
+          <div class="prod-card-brand">QUNDIS</div>
+          <div class="prod-card-name">Q heat 5.5 US — Integrated</div>
+          <div class="prod-card-model">Static Ultrasonic BTU Meter</div>
+          <p class="prod-card-desc">All-in-one static ultrasonic heat and cold meter with integrated M-Bus interface. No moving parts, high dynamic range — ideal for central heating and cooling circuits.</p>
+        </div>
+        <div class="prod-card-specs">
+          <div class="spec-item"><div class="spec-label">DN</div><div class="spec-value">DN15 – DN40</div></div>
+          <div class="spec-item"><div class="spec-label">Flow Rate (Qp)</div><div class="spec-value">0.6 – 10.0 m³/h</div></div>
+          <div class="spec-item"><div class="spec-label">Accuracy</div><div class="spec-value">Class 2 / Class 3</div></div>
+          <div class="spec-item"><div class="spec-label">Battery Life</div><div class="spec-value">7 – 10 years</div></div>
+          <div class="spec-item"><div class="spec-label">Temp Range</div><div class="spec-value">5°C – 90°C</div></div>
+          <div class="spec-item"><div class="spec-label">Protection</div><div class="spec-value">IP65</div></div>
+        </div>
+        <div class="prod-card-tags">
+          <span>M-Bus</span><span>MID Certified</span><span>IP65</span><span>PN16</span>
+        </div>
+        <div class="prod-card-footer">
+          <a href="../index.html#rfq" class="prod-card-cta">Enquire About This Product</a>
+        </div>
+      </div>
+
+      <div class="prod-card">
+        <div class="prod-card-accent" style="background:linear-gradient(90deg,#0067A5,#00BEDC)"></div>
+        <div class="prod-card-body">
+          <div class="prod-card-brand">QUNDIS</div>
+          <div class="prod-card-name">Q heat Split — Series 473</div>
+          <div class="prod-card-model">Ultrasonic Flow Sensor (Split System)</div>
+          <p class="prod-card-desc">MID-compliant all-brass ultrasonic flow sensor for split heat meter systems. Covers DN15–DN100, any installation position, up to 1:250 dynamic range.</p>
+        </div>
+        <div class="prod-card-specs">
+          <div class="spec-item"><div class="spec-label">DN</div><div class="spec-value">DN15 – DN100</div></div>
+          <div class="spec-item"><div class="spec-label">Flow Rate (Qp)</div><div class="spec-value">0.6 – 100 m³/h</div></div>
+          <div class="spec-item"><div class="spec-label">Dynamic Range</div><div class="spec-value">Up to 1:250</div></div>
+          <div class="spec-item"><div class="spec-label">Max Temp</div><div class="spec-value">Up to 150°C</div></div>
+          <div class="spec-item"><div class="spec-label">Max Pressure</div><div class="spec-value">25 bar (flange)</div></div>
+          <div class="spec-item"><div class="spec-label">Protection</div><div class="spec-value">IP54</div></div>
+        </div>
+        <div class="prod-card-tags">
+          <span>MID</span><span>EN 1434</span><span>IP54</span><span>Brass Body</span>
+        </div>
+        <div class="prod-card-footer">
+          <a href="../index.html#rfq" class="prod-card-cta">Enquire About This Product</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- WATER METERS -->
+  <div class="tab-panel" data-panel="water">
+    <div class="prod-section-head">
+      <div>
+        <div class="prod-section-eyebrow">Water Meters</div>
+        <h2>Cold &amp; Hot Water Metering</h2>
+        <p>Ultrasonic and volumetric water meters for residential, commercial and utility-scale deployments. ISO 4064 and MID certified, submersible IP68.</p>
+      </div>
+      <a href="../index.html#rfq" class="prod-enquire-btn">Enquire Now →</a>
+    </div>
+    <div class="prod-grid">
+
+      <div class="prod-card">
+        <div class="prod-card-accent" style="background:linear-gradient(90deg,#00838F,#00BEDC)"></div>
+        <div class="prod-card-body">
+          <div class="prod-card-brand">maddalena</div>
+          <div class="prod-card-name">Electrosonic 3Q</div>
+          <div class="prod-card-model">Ultrasonic Smart Water Meter</div>
+          <p class="prod-card-desc">Static ultrasonic water meter with no moving parts — accurate cold and hot water measurement for residential and commercial applications. Tamper detection built-in.</p>
+        </div>
+        <div class="prod-card-specs">
+          <div class="spec-item"><div class="spec-label">DN</div><div class="spec-value">DN15 – DN25</div></div>
+          <div class="spec-item"><div class="spec-label">Accuracy</div><div class="spec-value">Class 2 (ISO 4064)</div></div>
+          <div class="spec-item"><div class="spec-label">Temp (Cold)</div><div class="spec-value">0.1°C – 30°C</div></div>
+          <div class="spec-item"><div class="spec-label">Temp (Hot)</div><div class="spec-value">Up to 90°C</div></div>
+          <div class="spec-item"><div class="spec-label">Battery Life</div><div class="spec-value">Up to 12 years</div></div>
+          <div class="spec-item"><div class="spec-label">Protection</div><div class="spec-value">IP68</div></div>
+        </div>
+        <div class="prod-card-tags">
+          <span>M-Bus</span><span>LoRaWAN</span><span>IP68</span><span>MID</span><span>ISO 4064</span>
+        </div>
+        <div class="prod-card-footer">
+          <a href="../index.html#rfq" class="prod-card-cta">Enquire About This Product</a>
+        </div>
+      </div>
+
+      <div class="prod-card">
+        <div class="prod-card-accent" style="background:linear-gradient(90deg,#00838F,#00BEDC)"></div>
+        <div class="prod-card-body">
+          <div class="prod-card-brand">maddalena</div>
+          <div class="prod-card-name">E-bulk 3Q</div>
+          <div class="prod-card-model">Volumetric Bulk Water Meter</div>
+          <p class="prod-card-desc">Multi-jet volumetric water meter for bulk metering in commercial, industrial and district water networks. Class 2 accuracy with pulse or M-Bus output for AMR/AMI integration.</p>
+        </div>
+        <div class="prod-card-specs">
+          <div class="spec-item"><div class="spec-label">DN</div><div class="spec-value">DN15 – DN50</div></div>
+          <div class="spec-item"><div class="spec-label">Accuracy</div><div class="spec-value">Class 2 (ISO 4064)</div></div>
+          <div class="spec-item"><div class="spec-label">Temp</div><div class="spec-value">0.1°C – 30°C</div></div>
+          <div class="spec-item"><div class="spec-label">Max Pressure</div><div class="spec-value">16 bar (PN16)</div></div>
+          <div class="spec-item"><div class="spec-label">Output</div><div class="spec-value">Pulse / M-Bus</div></div>
+          <div class="spec-item"><div class="spec-label">Protection</div><div class="spec-value">IP68</div></div>
+        </div>
+        <div class="prod-card-tags">
+          <span>Pulse Output</span><span>M-Bus</span><span>IP68</span><span>MID</span>
+        </div>
+        <div class="prod-card-footer">
+          <a href="../index.html#rfq" class="prod-card-cta">Enquire About This Product</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SHUTOFF VALVES -->
+  <div class="tab-panel" data-panel="valves">
+    <div class="prod-section-head">
+      <div>
+        <div class="prod-section-eyebrow">Smart Shutoff Valves</div>
+        <h2>Automated Leak Prevention</h2>
+        <p>Motorised ball valves with M-Bus or LoRaWAN communication for remote control and automated leak isolation. Wired and wireless options available.</p>
+      </div>
+      <a href="../index.html#rfq" class="prod-enquire-btn">Enquire Now →</a>
+    </div>
+    <div class="prod-grid">
+
+      <div class="prod-card">
+        <div class="prod-card-accent" style="background:linear-gradient(90deg,#1A237E,#3949AB)"></div>
+        <div class="prod-card-body">
+          <div class="prod-card-brand">Basiox</div>
+          <div class="prod-card-name">Wired M-Bus Shutoff Valve</div>
+          <div class="prod-card-model">DN15 to DN40</div>
+          <p class="prod-card-desc">Motorised ball valve with integrated M-Bus for remote open/close and status monitoring. Ideal for residential and light-commercial sub-metering systems.</p>
+        </div>
+        <div class="prod-card-specs">
+          <div class="spec-item"><div class="spec-label">DN</div><div class="spec-value">DN15 – DN40</div></div>
+          <div class="spec-item"><div class="spec-label">Actuation</div><div class="spec-value">&lt; 5 sec full stroke</div></div>
+          <div class="spec-item"><div class="spec-label">Power</div><div class="spec-value">24V DC (M-Bus)</div></div>
+          <div class="spec-item"><div class="spec-label">Body</div><div class="spec-value">Brass</div></div>
+          <div class="spec-item"><div class="spec-label">Pressure</div><div class="spec-value">PN16</div></div>
+          <div class="spec-item"><div class="spec-label">Protection</div><div class="spec-value">IP65</div></div>
+        </div>
+        <div class="prod-card-tags">
+          <span>M-Bus</span><span>IP65</span><span>PN16</span><span>DN100 on request</span>
+        </div>
+        <div class="prod-card-footer">
+          <a href="../index.html#rfq" class="prod-card-cta">Enquire About This Product</a>
+        </div>
+      </div>
+
+      <div class="prod-card">
+        <div class="prod-card-accent" style="background:linear-gradient(90deg,#1A237E,#3949AB)"></div>
+        <div class="prod-card-body">
+          <div class="prod-card-brand">Basiox</div>
+          <div class="prod-card-name">Wired M-Bus Shutoff Valve</div>
+          <div class="prod-card-model">DN50 and Above</div>
+          <p class="prod-card-desc">Heavy-duty motorised ball valve with M-Bus interface for large-diameter pipework. Built for commercial, industrial and district cooling applications.</p>
+        </div>
+        <div class="prod-card-specs">
+          <div class="spec-item"><div class="spec-label">DN</div><div class="spec-value">DN50 – DN100</div></div>
+          <div class="spec-item"><div class="spec-label">Actuation</div><div class="spec-value">&lt; 10 sec full stroke</div></div>
+          <div class="spec-item"><div class="spec-label">Power</div><div class="spec-value">24V DC / 230V AC</div></div>
+          <div class="spec-item"><div class="spec-label">Body</div><div class="spec-value">Brass / Stainless Steel</div></div>
+          <div class="spec-item"><div class="spec-label">Pressure</div><div class="spec-value">PN16</div></div>
+          <div class="spec-item"><div class="spec-label">Protection</div><div class="spec-value">IP65</div></div>
+        </div>
+        <div class="prod-card-tags">
+          <span>M-Bus</span><span>IP65</span><span>Flanged/Threaded</span>
+        </div>
+        <div class="prod-card-footer">
+          <a href="../index.html#rfq" class="prod-card-cta">Enquire About This Product</a>
+        </div>
+      </div>
+
+      <div class="prod-card">
+        <div class="prod-card-accent" style="background:linear-gradient(90deg,#004D40,#00796B)"></div>
+        <div class="prod-card-body">
+          <div class="prod-card-brand">Basiox</div>
+          <div class="prod-card-name">LoRaWAN Shutoff Valve</div>
+          <div class="prod-card-model">DN15 to DN80 — 230V / 50Hz</div>
+          <p class="prod-card-desc">Wireless motorised shutoff valve with integrated LoRaWAN — no M-Bus cabling required. Long-range remote control up to 5 km for automated leak isolation.</p>
+        </div>
+        <div class="prod-card-specs">
+          <div class="spec-item"><div class="spec-label">DN</div><div class="spec-value">DN15 – DN80</div></div>
+          <div class="spec-item"><div class="spec-label">Protocol</div><div class="spec-value">LoRaWAN Class A/C</div></div>
+          <div class="spec-item"><div class="spec-label">Range</div><div class="spec-value">Up to 5 km</div></div>
+          <div class="spec-item"><div class="spec-label">Power</div><div class="spec-value">230V AC / 50Hz</div></div>
+          <div class="spec-item"><div class="spec-label">Pressure</div><div class="spec-value">PN16</div></div>
+          <div class="spec-item"><div class="spec-label">Protection</div><div class="spec-value">IP65</div></div>
+        </div>
+        <div class="prod-card-tags">
+          <span>LoRaWAN</span><span>Wireless</span><span>IP65</span><span>DN100 on request</span>
+        </div>
+        <div class="prod-card-footer">
+          <a href="../index.html#rfq" class="prod-card-cta">Enquire About This Product</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- M-BUS GATEWAYS -->
+  <div class="tab-panel" data-panel="gateways">
+    <div class="prod-section-head">
+      <div>
+        <div class="prod-section-eyebrow">M-Bus Gateways</div>
+        <h2>Data Collection &amp; Connectivity</h2>
+        <p>Robust M-Bus data concentrators that aggregate readings from large meter networks and forward them to BMS and billing platforms via Modbus, MQTT or BACnet.</p>
+      </div>
+      <a href="../index.html#rfq" class="prod-enquire-btn">Enquire Now →</a>
+    </div>
+    <div class="prod-grid">
+
+      <div class="prod-card">
+        <div class="prod-card-accent" style="background:linear-gradient(90deg,#1B5E20,#388E3C)"></div>
+        <div class="prod-card-body">
+          <div class="prod-card-brand">Basiox</div>
+          <div class="prod-card-name">BC-Master 250</div>
+          <div class="prod-card-model">M-Bus Data Concentrator</div>
+          <p class="prod-card-desc">Aggregates readings from up to 250 wired M-Bus meters and forwards data to head-end and BMS platforms via Modbus TCP/IP, MQTT or BACnet. DIN-rail mounted, supports 4G cellular.</p>
+        </div>
+        <div class="prod-card-specs">
+          <div class="spec-item"><div class="spec-label">Capacity</div><div class="spec-value">250 M-Bus slaves</div></div>
+          <div class="spec-item"><div class="spec-label">Output</div><div class="spec-value">Modbus TCP / MQTT / BACnet</div></div>
+          <div class="spec-item"><div class="spec-label">Network</div><div class="spec-value">Ethernet / Wi-Fi / 4G</div></div>
+          <div class="spec-item"><div class="spec-label">Mounting</div><div class="spec-value">DIN-rail</div></div>
+          <div class="spec-item"><div class="spec-label">Power</div><div class="spec-value">100–240V AC / 24V DC</div></div>
+          <div class="spec-item"><div class="spec-label">Protection</div><div class="spec-value">IP30 (panel)</div></div>
+        </div>
+        <div class="prod-card-tags">
+          <span>250 Meters</span><span>Modbus TCP</span><span>MQTT</span><span>BACnet</span><span>4G</span>
+        </div>
+        <div class="prod-card-footer">
+          <a href="../index.html#rfq" class="prod-card-cta">Enquire About This Product</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="page-footer">
+  © 2025 Basiox Controls FZE LLC. All rights reserved. &nbsp;|&nbsp; <a href="../index.html">Back to main site</a>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab-btn');
+  const panels = document.querySelectorAll('.tab-panel');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.querySelector(`[data-panel="${tab.dataset.tab}"]`).classList.add('active');
+      window.scrollTo({top: 130, behavior: 'smooth'});
+    });
+  });
+</script>
+</body>
+</html>
