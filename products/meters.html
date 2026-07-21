@@ -278,6 +278,9 @@
 
     .prod-card-footer {
       padding: 0 22px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
     }
     .prod-card-cta {
       display: block;
@@ -292,6 +295,24 @@
       transition: background 0.2s;
     }
     .prod-card-cta:hover { background: var(--sky); color: var(--forest); }
+    .prod-card-dl {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      text-align: center;
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1.5px solid var(--border);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 9px 10px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .prod-card-dl:hover { border-color: var(--sky); color: var(--sky); }
+    .prod-card-dl svg { flex-shrink: 0; }
 
     /* FOOTER */
     .page-footer {
@@ -356,51 +377,73 @@
     </div>
     <div class="prod-grid">
 
+      <!-- Q heat 5.5 US -->
       <div class="prod-card">
         <div class="prod-card-accent" style="background:linear-gradient(90deg,#0067A5,#00BEDC)"></div>
         <div class="prod-card-body">
           <div class="prod-card-brand">QUNDIS</div>
-          <div class="prod-card-name">Q heat 5.5 US — Integrated</div>
-          <div class="prod-card-model">Static Ultrasonic BTU Meter</div>
-          <p class="prod-card-desc">All-in-one static ultrasonic heat and cold meter with integrated M-Bus interface. No moving parts, high dynamic range — ideal for central heating and cooling circuits.</p>
+          <div class="prod-card-name">Q heat 5.5 US M-Bus / Impuls-IN</div>
+          <div class="prod-card-model">Integrated Static Ultrasonic Heat &amp; Cold Meter</div>
+          <p class="prod-card-desc">All-in-one static ultrasonic heat and cold meter with integrated M-Bus interface and two pulse inputs. All-metal flow sensor, contamination-resistant, any installation position including overhead. Detachable calculator unit for tight spaces.</p>
         </div>
         <div class="prod-card-specs">
-          <div class="spec-item"><div class="spec-label">DN</div><div class="spec-value">DN15 – DN40</div></div>
+          <div class="spec-item"><div class="spec-label">Nominal DN</div><div class="spec-value">DN15 – DN40</div></div>
           <div class="spec-item"><div class="spec-label">Flow Rate (Qp)</div><div class="spec-value">0.6 – 10.0 m³/h</div></div>
-          <div class="spec-item"><div class="spec-label">Accuracy</div><div class="spec-value">Class 2 / Class 3</div></div>
-          <div class="spec-item"><div class="spec-label">Battery Life</div><div class="spec-value">7 – 10 years</div></div>
-          <div class="spec-item"><div class="spec-label">Temp Range</div><div class="spec-value">5°C – 90°C</div></div>
-          <div class="spec-item"><div class="spec-label">Protection</div><div class="spec-value">IP65</div></div>
+          <div class="spec-item"><div class="spec-label">Accuracy Class</div><div class="spec-value">Class 2 / Class 3</div></div>
+          <div class="spec-item"><div class="spec-label">Temp Range</div><div class="spec-value">5°C – 90°C (flow sensor)</div></div>
+          <div class="spec-item"><div class="spec-label">Calc. Temp Range</div><div class="spec-value">0°C – 105°C</div></div>
+          <div class="spec-item"><div class="spec-label">Temp Diff Range</div><div class="spec-value">3 K – 70 K</div></div>
+          <div class="spec-item"><div class="spec-label">Max Pressure</div><div class="spec-value">16 bar (PN16)</div></div>
+          <div class="spec-item"><div class="spec-label">Battery Life</div><div class="spec-value">7 years (opt. 10 yr)</div></div>
+          <div class="spec-item"><div class="spec-label">M-Bus Readouts</div><div class="spec-value">Up to 96/day (15 min)</div></div>
+          <div class="spec-item"><div class="spec-label">Pulse Inputs</div><div class="spec-value">2 × (EN 1434-2, Class IB)</div></div>
+          <div class="spec-item"><div class="spec-label">Display</div><div class="spec-value">8-digit LCD + pictograms</div></div>
+          <div class="spec-item"><div class="spec-label">Protection</div><div class="spec-value">IP65 (calc. &amp; sensor)</div></div>
         </div>
         <div class="prod-card-tags">
-          <span>M-Bus</span><span>MID Certified</span><span>IP65</span><span>PN16</span>
+          <span>M-Bus</span><span>2 Pulse Inputs</span><span>MID 2014/32/EU</span><span>RoHS</span><span>IP65</span><span>PN16</span><span>Any Position</span>
         </div>
         <div class="prod-card-footer">
           <a href="../index.html#rfq" class="prod-card-cta">Enquire About This Product</a>
+          <a href="../images/QUNDIS_datasheet_Q_heat_5.5_US_M-Bus_08-2025.pdf" download class="prod-card-dl">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Datasheet (PDF)
+          </a>
         </div>
       </div>
 
+      <!-- Series 473 Split -->
       <div class="prod-card">
         <div class="prod-card-accent" style="background:linear-gradient(90deg,#0067A5,#00BEDC)"></div>
         <div class="prod-card-body">
           <div class="prod-card-brand">QUNDIS</div>
-          <div class="prod-card-name">Q heat Split — Series 473</div>
-          <div class="prod-card-model">Ultrasonic Flow Sensor (Split System)</div>
-          <p class="prod-card-desc">MID-compliant all-brass ultrasonic flow sensor for split heat meter systems. Covers DN15–DN100, any installation position, up to 1:250 dynamic range.</p>
+          <div class="prod-card-name">Ultrasonic Volume Measuring Parts Series 473</div>
+          <div class="prod-card-model">Split Ultrasonic Flow Sensor — All-Brass, MID Class 2</div>
+          <p class="prod-card-desc">MID-compliant all-brass ultrasonic flow sensor for split heat/cold meter systems. Covers qp 0.6–100 m³/h across DN15–DN100, dynamic range up to 1:250, medium temperatures to 150°C. Thread (PN16) and flange (PN25) versions. Integrates with QUNDIS R20/R21 calculator and walk-by / AMR radio modules.</p>
         </div>
         <div class="prod-card-specs">
-          <div class="spec-item"><div class="spec-label">DN</div><div class="spec-value">DN15 – DN100</div></div>
+          <div class="spec-item"><div class="spec-label">Nominal DN</div><div class="spec-value">DN15 – DN100</div></div>
           <div class="spec-item"><div class="spec-label">Flow Rate (Qp)</div><div class="spec-value">0.6 – 100 m³/h</div></div>
-          <div class="spec-item"><div class="spec-label">Dynamic Range</div><div class="spec-value">Up to 1:250</div></div>
-          <div class="spec-item"><div class="spec-label">Max Temp</div><div class="spec-value">Up to 150°C</div></div>
-          <div class="spec-item"><div class="spec-label">Max Pressure</div><div class="spec-value">25 bar (flange)</div></div>
+          <div class="spec-item"><div class="spec-label">Accuracy Class</div><div class="spec-value">EN 1434 / MID Class 2</div></div>
+          <div class="spec-item"><div class="spec-label">Dynamic Range</div><div class="spec-value">1:100 (opt. 1:250)</div></div>
+          <div class="spec-item"><div class="spec-label">Temp (Heat)</div><div class="spec-value">5°C – 130/150°C</div></div>
+          <div class="spec-item"><div class="spec-label">Temp (Cold)</div><div class="spec-value">5°C – 50°C</div></div>
+          <div class="spec-item"><div class="spec-label">Max Pressure</div><div class="spec-value">PN16 (thread) / PN25 (flange)</div></div>
+          <div class="spec-item"><div class="spec-label">Body Material</div><div class="spec-value">Brass (all sizes)</div></div>
+          <div class="spec-item"><div class="spec-label">Interface</div><div class="spec-value">Open Collector Pulse</div></div>
+          <div class="spec-item"><div class="spec-label">Pulse Cable</div><div class="spec-value">2.4 m (4-wire)</div></div>
+          <div class="spec-item"><div class="spec-label">Power Supply</div><div class="spec-value">3.0 – 5.5 V DC (external)</div></div>
           <div class="spec-item"><div class="spec-label">Protection</div><div class="spec-value">IP54</div></div>
         </div>
         <div class="prod-card-tags">
-          <span>MID</span><span>EN 1434</span><span>IP54</span><span>Brass Body</span>
+          <span>MID DE-07-MI004-PTB022</span><span>EN 1434 Class 2</span><span>IP54</span><span>Brass Body</span><span>Any Position</span><span>Thread &amp; Flange</span>
         </div>
         <div class="prod-card-footer">
           <a href="../index.html#rfq" class="prod-card-cta">Enquire About This Product</a>
+          <a href="../images/QUNDIS_data_sheet_Q_heat_split_EN.pdf" download class="prod-card-dl">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Datasheet (PDF)
+          </a>
         </div>
       </div>
 
